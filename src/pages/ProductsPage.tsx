@@ -1,5 +1,6 @@
 import {
   ArrowUp,
+  ArrowUpRight,
   Check,
   ChevronDown,
   Cloud,
@@ -10,7 +11,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { useEffect, useState } from "react";
-import { company } from "../data/content";
+import { company, externalProducts } from "../data/content";
 
 type ProductSection = {
   id: string;
@@ -473,6 +474,44 @@ export default function ProductsPage() {
               }
             />
           ))}
+        </div>
+      </section>
+
+      <section className="border-t border-slate-700/35 px-6 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate-500">
+            Extended stack
+          </p>
+          <h2 className="mb-8 text-3xl font-medium tracking-[-0.035em] text-[#f8f8f8] sm:text-4xl">
+            More from the Quantum product line.
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {externalProducts.map((product) => (
+              <a
+                key={product.id}
+                href={product.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.045] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.08]"
+              >
+                <div>
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">
+                    {product.shortName}
+                  </span>
+                  <p className="mt-2 text-base font-semibold tracking-tight text-[#f8f8f8]">
+                    {product.title}
+                  </p>
+                </div>
+                <div className="mt-6 flex items-center justify-between text-sm text-slate-400">
+                  <span className="truncate">{product.href.replace("https://", "")}</span>
+                  <ArrowUpRight
+                    className="h-4 w-4 shrink-0 text-slate-400 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#f8f8f8]"
+                    strokeWidth={1.7}
+                  />
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
