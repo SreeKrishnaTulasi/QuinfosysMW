@@ -12,6 +12,7 @@ import {
   Network,
   Search,
   Sparkles,
+  Terminal,
   type LucideIcon,
 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -253,6 +254,38 @@ const products: ProductSection[] = [
       "Optimization core",
       "Ranking output",
       "Feedback loop",
+    ],
+  },
+  {
+    id: "qiscode",
+    number: "08",
+    eyebrow: "Platform layer",
+    title: "Quantum Code Platform",
+    shortName: "QISCode",
+    icon: Terminal,
+    href: "https://qiscode.quinfosys.com",
+    summary:
+      "QISCode is the unified quantum computing platform for designing, simulating, transpiling, and executing quantum programs in one connected workspace.",
+    longCopy:
+      "QISCode brings the full quantum development cycle into a single platform. The product direction covers circuit design, simulation, transpilation across backends, and execution management, giving developers and research teams a consistent workspace instead of stitching together separate tools for each stage of quantum program development.",
+    capabilities: [
+      "Unified workspace for quantum circuit design and editing",
+      "Built in simulation for testing before hardware execution",
+      "Transpilation support across multiple quantum backends",
+      "Execution management and run history in one place",
+      "Direction built for developers, students, and research teams",
+    ],
+    useCases: [
+      "Circuit design",
+      "Simulation and testing",
+      "Cross backend transpilation",
+      "Execution management",
+    ],
+    architecture: [
+      "Design workspace",
+      "Simulation engine",
+      "Transpiler",
+      "Execution manager",
     ],
   },
 ];
@@ -564,7 +597,7 @@ export default function ProductsPage() {
               Products
             </p>
             <h1 className="text-4xl font-medium tracking-[-0.05em] text-[#f8f8f8] sm:text-5xl lg:text-7xl">
-              Seven Quantum Products. One connected stack.
+              Eight Quantum Products. One connected stack.
             </h1>
             <p className="mt-8 max-w-3xl text-[1.02rem] font-light leading-8 text-slate-300 sm:text-lg sm:leading-9">
               Quinfosys products are structured as a connected quantum stack: a
