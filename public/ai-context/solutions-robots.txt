@@ -1,0 +1,47 @@
+# Quinfosys Solutions Page AI Context / Robots Note
+
+Page: /solutions
+Purpose: The Solutions page presents business-facing quantum solution areas in the same visual and interaction style as the Products page. It should explain how Quinfosys helps organizations move from quantum opportunity to practical adoption.
+
+Design rules:
+- Keep the dark quantum-gradient page language used in ProductsPage and the homepage redesign.
+- Use alternating expandable solution blocks for visual consistency with the Products page.
+- Keep the solution visual cards abstract and lightweight; do not add heavy legacy images.
+- Keep interactions simple: one expandable solution block at a time, Read more / Show less, and scroll-to-top after deeper scrolling.
+- Keep typography, spacing, rounded panels, and CTA styling consistent with ProductsPage.
+- Use SVG/CSS/Tailwind motion only. Do not add new animation libraries.
+- Respect reduced-motion browser preferences through the global CSS rule.
+
+Solution section map:
+1. Hero: Quantum solution areas for real business systems.
+2. Solution pathway strip: Discover, Prototype, Scale.
+3. Solution block 01: Enterprise Quantum Strategy.
+4. Solution block 02: Quantum Optimization.
+5. Solution block 03: Quantum Analytics.
+6. Solution block 04: Quantum-Enhanced Security.
+7. Solution block 05: Quantum Cloud Migration.
+8. Solution block 06: Quantum Innovation Framework.
+9. CTA: solution mapping discussion with Quinfosys.
+
+Solution positioning:
+- Enterprise Quantum Strategy is the readiness and roadmap layer.
+- Quantum Optimization is the operational decision layer.
+- Quantum Analytics is the insight and forecasting layer.
+- Quantum-Enhanced Security is the trust and cryptographic readiness layer.
+- Quantum Cloud Migration is the adoption pathway for hybrid cloud environments.
+- Quantum Innovation Framework is the execution model for prioritizing, prototyping, and scaling quantum initiatives.
+
+Content rules:
+- Keep claims practical and business-facing.
+- Avoid exaggerated claims such as guaranteed speedups or immediate replacement of classical systems.
+- Explain each solution through capabilities, business use cases, and a clear delivery path.
+- Preserve the six solution areas from the existing Quinfosys content.
+
+Canonical internal routes:
+/
+/products
+/solutions
+/services
+/research-development
+/resources
+/company

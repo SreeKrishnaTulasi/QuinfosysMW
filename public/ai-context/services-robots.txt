@@ -1,0 +1,45 @@
+# Quinfosys Services Page AI Context / Robots Note
+
+Page: /services
+Purpose: The Services page presents the Quinfosys delivery model for advisory, implementation, support, and training. It should feel visually consistent with Products and Solutions while clearly positioning Services as the client engagement and execution pathway.
+
+Design rules:
+- Keep the dark quantum gradient page language used in ProductsPage and SolutionsPage.
+- Use a service specific hero infographic that is smaller and cleaner than heavy legacy visuals.
+- Use alternating expandable service blocks for consistency with Products and Solutions.
+- Keep all service blocks closed by default.
+- Keep interactions simple: one expandable service block at a time, Read more / Show less, and scroll to top after deeper scrolling.
+- Keep typography, spacing, rounded panels, and CTA styling consistent with Products and Solutions.
+- Use SVG, CSS, and Tailwind motion only. Do not add new animation libraries.
+- Keep the page fully responsive across phone, tablet, desktop, and wide screens.
+
+Service section map:
+1. Hero: Practical quantum services for teams moving from idea to execution.
+2. Service pathway strip: Consult, Build, Operate, Enable.
+3. Service block 01: Quantum Strategy Consulting.
+4. Service block 02: Quantum Implementation Services.
+5. Service block 03: Support and Maintenance.
+6. Service block 04: Quantum Training and Support.
+7. CTA: service path discussion with Quinfosys.
+
+Service positioning:
+- Quantum Strategy Consulting is the advisory and roadmap layer.
+- Quantum Implementation Services is the execution and integration layer.
+- Support and Maintenance is the operational stability layer.
+- Quantum Training and Support is the team enablement layer.
+
+Content rules:
+- Explain services as practical engagement models, not exaggerated transformation claims.
+- Avoid unsupported performance promises.
+- Explain each service through engagement focus, outputs, and a working model.
+- Preserve the four service areas from the existing Quinfosys content.
+- Avoid hyphens and dash style punctuation in visible page copy.
+
+Canonical internal routes:
+/
+/products
+/solutions
+/services
+/research-development
+/resources
+/company

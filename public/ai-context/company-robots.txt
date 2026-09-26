@@ -1,0 +1,35 @@
+# Quinfosys Company Page Context
+# Source of truth for AI assistants reviewing the redesigned Company page.
+
+Page: Company
+Route: /company
+Purpose: Present Quinfosys company identity, leadership, partnerships, updates, and careers in one structured company page.
+
+Page Structure:
+1. About Us
+2. Leadership Team
+3. Updates and Partnerships
+4. Careers
+
+Design Direction:
+The Company page follows the homepage inspired blue and dark blue shaded gray visual language. It is a premium editorial company profile rather than a full screen snap presentation. Sections are longer, readable, and spacious so visitors can understand the company without forced scroll jumps.
+
+Content Rules:
+Existing About Us, Leadership, MoUs, News, and Careers content is preserved from the source website.
+The standalone Contact page content and contact form are removed from the company page.
+Contact is reduced to the primary email address: info@quinfosys.com.
+Adhiraj Kapuria is removed from the leadership and R&D team content.
+About Us content appears once only. Vision, Mission, Commitments, and Core Values are not repeated.
+
+Leadership Included:
+Dr. Maheswara Rao Valluri, Founder and CEO
+Dr. Sreenivas Tirumala, Quantum AI, RMIT University, Vietnam
+Dr Piyush Dua, Material Scientist for Quantum Tech, DBS Global University, Dehradun
+Dr. Shankar Pidishety, Expert in Fiber Devices For Quantum, NIT Warangal
+Dr. T S L Radhika, Quantum Machine Learning, BITS Pilani
+
+Leadership Removed:
+Adhiraj Kapuria, Researcher, UC Berkeley
+
+Primary Contact:
+info@quinfosys.com

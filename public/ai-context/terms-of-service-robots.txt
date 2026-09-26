@@ -1,0 +1,16 @@
+# Quinfosys Terms of Service Page Context
+
+Page: Terms of Service
+Route: /terms-of-service
+Purpose: Present the official Quinfosys Terms and Conditions text from the source website.
+
+Content Rules:
+The legal terms wording should remain copied from the source repository.
+Do not summarize, rewrite, shorten, or reinterpret legal clauses in the rendered page.
+Visual updates may improve spacing, readability, and container styling only.
+
+Design Direction:
+The page uses a clean light legal document card with rounded corners, a subtle border, and readable typography.
+
+Navigation:
+The Terms of Service page is linked from the white footer legal section.

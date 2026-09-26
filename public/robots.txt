@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# AI-readable homepage context for this redesign iteration.
+# This is not a replacement for normal crawler rules; it is a compact context file for assistants and reviewers.
+Homepage-Context: /ai-context/homepage-robots.txt

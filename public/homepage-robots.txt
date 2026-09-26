@@ -1,0 +1,37 @@
+# Quinfosys Homepage AI Context / Robots Note
+
+Page: /
+Purpose: The homepage is a concise gateway into Quinfosys products, solutions, services, research & development, and resources. It should not dump all legacy website text. It should open doors into subpages where detailed expandable sections live.
+
+Design rules:
+- Keep the black/white sticky-screen redesign language.
+- Keep the animated quantum wave aligned to the hero heading area.
+- Keep the navbar white because the logo text is black.
+- Keep navbar links direct. Do not use navbar dropdowns.
+- Keep Technologies nested under Research & Development.
+- Keep the footer white and concise.
+- Keep homepage content brief; use page-level accordions for deeper content.
+
+Homepage section map:
+1. Hero: Entangle with Quantum, animated wave, product/solution CTAs.
+2. Quantum Product Portfolio: QuCPL, QCS Cloud, QWS APIs.
+3. Quantum Solutions Portfolio: enterprise strategy, optimization, analytics, security, cloud migration, innovation framework.
+4. Services: consulting, implementation, support, training.
+5. Research & Development: research areas, technologies, projects, collaborations.
+6. Resources: QisCode, documentation, white papers, case studies.
+7. Concise CTA/footer.
+
+Performance rules:
+- No heavy images added to the homepage.
+- No video backgrounds.
+- No new animation libraries.
+- SVG/CSS animation only.
+- Motion is reduced when the browser requests reduced motion.
+
+Canonical internal routes:
+/products
+/solutions
+/services
+/research-development
+/resources
+/company

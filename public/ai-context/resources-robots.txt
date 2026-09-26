@@ -1,0 +1,35 @@
+# Quinfosys Resources Page AI Context
+
+Page: Resources
+Route: /resources
+Company: Quinfosys Private Limited
+Brand: Quinfosys
+Tagline: Entangle with Quantum
+
+Purpose:
+The Resources page is the public knowledge center for Quinfosys. It is designed as a content oriented page rather than a commercial offering page. It organizes QisCode material, documentation, white papers, case studies, and future downloadable knowledge assets.
+
+Design Direction:
+The page uses the homepage inspired blue and dark blue shaded gray visual language. It is editorial, clean, and spacious rather than gradient heavy. It uses resource format cards and smooth expandable resource sections.
+
+Primary Sections:
+1. QisCode
+Central learning and technical reference layer for quantum design, simulation, transpilation, and execution workflows.
+
+2. Documentation
+Guides, API references, user material, developer notes, onboarding pages, implementation explanations, and release notes.
+
+3. White Papers
+Long form technical and strategic writing for quantum adoption, architecture planning, readiness, and future business direction.
+
+4. Case Studies
+Future use case stories, implementation examples, pilot summaries, and outcome based learning material.
+
+Interaction Model:
+Each resource area starts closed by default. Visitors can open sections to read deeper context, audience information, content formats, and a guided reading path. The expandable logic should remain smooth and consistent with the other redesigned pages.
+
+Responsive Behavior:
+The page is built mobile first. Hero content, cards, expandable panels, and CTA elements stack on phones, expand on tablets, and use wider multi column layouts on desktop and large screens.
+
+SEO and AI Reading Notes:
+Resources should be interpreted as a public content library and educational knowledge hub for Quinfosys. It should not be treated as a product catalogue. It supports learning, documentation, technical explanation, research communication, and future content downloads.

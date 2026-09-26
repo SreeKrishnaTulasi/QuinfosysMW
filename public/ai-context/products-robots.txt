@@ -1,0 +1,41 @@
+# Quinfosys Products Page AI Context / Robots Note
+
+Page: /products
+Purpose: The Products page presents the Quinfosys product stack as three connected quantum technology layers. It should explain the products clearly while matching the homepage redesign language and avoiding heavy legacy website content.
+
+Design rules:
+- Keep the dark quantum-gradient page language used in the current ProductsPage.
+- Keep the alternating expandable product blocks.
+- Keep the product visual cards abstract and lightweight; do not add heavy product imagery.
+- Keep interactions simple: one expandable product block at a time, Read more / Show less, and scroll-to-top after deeper scrolling.
+- Keep typography, spacing, rounded panels, and CTA styling consistent with the homepage and Solutions page.
+- Use SVG/CSS/Tailwind motion only. Do not add new animation libraries.
+- Respect reduced-motion browser preferences through the global CSS rule.
+
+Product section map:
+1. Hero: Three quantum products. One connected stack.
+2. Product pathway strip: Language, Cloud, Web.
+3. Product block 01: Quantum Computing Programming Language / QuCPL.
+4. Product block 02: Quantum Cloud Services / QCS.
+5. Product block 03: Quantum Web Services / QWS.
+6. CTA: product demo, technical walkthrough, or discussion.
+
+Product positioning:
+- QuCPL is the language layer for quantum algorithm and circuit development.
+- QCS is the cloud execution layer for scalable quantum and hybrid workloads.
+- QWS is the web integration layer for exposing quantum capabilities through APIs and software systems.
+
+Content rules:
+- Explain products as practical technology layers, not as exaggerated claims.
+- Avoid unsupported performance promises.
+- Keep product details expandable so the first viewport remains clean.
+- Use consistent labels: Language layer, Execution layer, Integration layer.
+
+Canonical internal routes:
+/
+/products
+/solutions
+/services
+/research-development
+/resources
+/company
