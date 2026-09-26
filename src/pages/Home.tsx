@@ -182,7 +182,7 @@ const gatewayGroups = [
     title: "Resources",
     href: "/resources",
     icon: <BookOpen strokeWidth={1.5} />,
-    items: ["QisCode", "Documentation", "White Papers", "Case Studies"],
+    items: ["Docs", "Papers", "Events"],
   },
 ];
 

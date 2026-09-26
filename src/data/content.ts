@@ -53,22 +53,6 @@ export const products: ContentItem[] = [
   },
 ];
 
-export type ExternalProduct = {
-  id: string;
-  title: string;
-  shortName: string;
-  href: string;
-};
-
-export const externalProducts: ExternalProduct[] = [
-  { id: 'qiscode', title: 'Quinfosys Quantum Code', shortName: 'QISCode', href: 'https://qiscode.quinfosys.com' },
-  { id: 'drug-discovery', title: 'Quinfosys Quantum Drug Discovery', shortName: 'QDD', href: 'https://drug.quinfosys.com' },
-  { id: 'qns', title: 'Quinfosys Quantum Network System', shortName: 'QNS', href: 'https://qns.quinfosys.com' },
-  { id: 'brain', title: 'Quinfosys Quantum Brain', shortName: 'Quantum Brain', href: 'https://brain.quinfosys.com' },
-  { id: 'qcs-cloud', title: 'Quinfosys Quantum Cloud Services', shortName: 'QCS', href: 'https://qcs.quinfosys.com' },
-  { id: 'qseo', title: 'Quinfosys Quantum Search Engine Optimisation', shortName: 'QSEO', href: 'https://qseo.quinfosys.com' },
-];
-
 export const solutions: ContentItem[] = [
   { id: 'enterprise-strategy', title: 'Enterprise Quantum Strategy', description: 'Comprehensive quantum roadmaps tailored to enterprise challenges and current systems.' },
   { id: 'optimization', title: 'Quantum Optimization', description: 'Quantum-powered approaches for logistics, allocation, scheduling, and operational decision systems.' },
@@ -93,10 +77,9 @@ export const researchDevelopment: ContentItem[] = [
 ];
 
 export const resources: ContentItem[] = [
-  { id: 'qiscode', title: 'QisCode', description: 'Unified quantum computing platform for design, simulation, transpilation, and execution.' },
-  { id: 'documentation', title: 'Documentation', description: 'Guides, API references, user documentation, and developer onboarding.' },
-  { id: 'whitepapers', title: 'White Papers', description: 'Technical and strategic papers for quantum adoption and architecture planning.' },
-  { id: 'case-studies', title: 'Case Studies', description: 'Use-case stories and implementation examples for future expansion.' },
+  { id: 'docs', title: 'Docs', description: 'Guides, API references, user documentation, and developer onboarding.' },
+  { id: 'papers', title: 'Papers', description: 'Technical and strategic papers for quantum adoption and architecture planning.' },
+  { id: 'events', title: 'Events', description: 'Upcoming and completed Quinfosys events, conclaves, and community sessions.' },
 ];
 
 export const companySections: ContentItem[] = [

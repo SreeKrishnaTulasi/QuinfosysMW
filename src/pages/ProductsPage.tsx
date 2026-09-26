@@ -1,17 +1,21 @@
 import {
   ArrowUp,
   ArrowUpRight,
+  BrainCircuit,
   Check,
   ChevronDown,
   Cloud,
   Code2,
+  FlaskConical,
   Globe,
   Mail,
+  Network,
+  Search,
   Sparkles,
   type LucideIcon,
 } from "lucide-react";
 import { useEffect, useState } from "react";
-import { company, externalProducts } from "../data/content";
+import { company } from "../data/content";
 
 type ProductSection = {
   id: string;
@@ -25,6 +29,7 @@ type ProductSection = {
   capabilities: string[];
   useCases: string[];
   architecture: string[];
+  href?: string;
 };
 
 const products: ProductSection[] = [
@@ -66,6 +71,7 @@ const products: ProductSection[] = [
     title: "Quantum Cloud Services",
     shortName: "QCS",
     icon: Cloud,
+    href: "https://qcs.quinfosys.com",
     summary:
       "QCS is the cloud access layer for running quantum workloads through scalable infrastructure, managed resources, and secure hybrid computing paths.",
     longCopy:
@@ -119,6 +125,134 @@ const products: ProductSection[] = [
       "Service layer",
       "Result delivery",
       "Security layer",
+    ],
+  },
+  {
+    id: "qdd",
+    number: "04",
+    eyebrow: "Discovery layer",
+    title: "Quantum Drug Discovery",
+    shortName: "QDD",
+    icon: FlaskConical,
+    href: "https://drug.quinfosys.com",
+    summary:
+      "QDD applies quantum computing to molecular simulation and screening, helping research teams explore drug candidates with greater speed and precision.",
+    longCopy:
+      "Quantum Drug Discovery is built for pharmaceutical and life sciences teams that need to model molecular interactions beyond the reach of classical compute. The product direction focuses on quantum accelerated molecular simulation, candidate screening, and structure analysis, giving research groups a way to shorten early stage discovery cycles while keeping results reproducible and lab ready.",
+    capabilities: [
+      "Quantum accelerated molecular and protein simulation",
+      "Candidate screening workflows for early stage discovery",
+      "Hybrid classical and quantum modelling pipelines",
+      "Structured output for lab and research validation",
+      "Direction built for pharma, biotech, and academic research teams",
+    ],
+    useCases: [
+      "Molecular simulation",
+      "Candidate screening",
+      "Research pipelines",
+      "Pharma and biotech R&D",
+    ],
+    architecture: [
+      "Molecular input",
+      "Quantum simulation",
+      "Candidate ranking",
+      "Research output",
+    ],
+  },
+  {
+    id: "qns",
+    number: "05",
+    eyebrow: "Network layer",
+    title: "Quantum Network System",
+    shortName: "QNS",
+    icon: Network,
+    href: "https://qns.quinfosys.com",
+    summary:
+      "QNS is the connectivity layer for quantum enabled communication, giving teams a structured path toward secure, distributed quantum networking.",
+    longCopy:
+      "Quantum Network System is designed for organizations planning ahead for distributed and secure quantum communication. The product direction covers quantum enabled network protocols, secure node to node communication patterns, and infrastructure planning for teams that want to prepare their networking stack for the quantum era without disrupting current systems.",
+    capabilities: [
+      "Quantum enabled network protocol direction",
+      "Secure node to node communication patterns",
+      "Infrastructure planning for distributed quantum systems",
+      "Hybrid classical and quantum network compatibility",
+      "Built for telecom, research, and enterprise networking teams",
+    ],
+    useCases: [
+      "Secure communication",
+      "Distributed networking",
+      "Telecom infrastructure",
+      "Research networking",
+    ],
+    architecture: [
+      "Node connection",
+      "Protocol layer",
+      "Secure channel",
+      "Network monitoring",
+    ],
+  },
+  {
+    id: "brain",
+    number: "06",
+    eyebrow: "Cognition layer",
+    title: "Quantum Brain",
+    shortName: "Quantum Brain",
+    icon: BrainCircuit,
+    href: "https://brain.quinfosys.com",
+    summary:
+      "Quantum Brain is the cognition layer combining quantum computing with AI, built for teams exploring quantum enhanced learning and decision systems.",
+    longCopy:
+      "Quantum Brain is positioned at the intersection of quantum computing and artificial intelligence. The product direction focuses on quantum enhanced machine learning, pattern recognition, and decision support, giving research and enterprise teams a path to experiment with hybrid quantum and AI systems as the underlying hardware and tooling continue to mature.",
+    capabilities: [
+      "Quantum enhanced machine learning experimentation",
+      "Hybrid AI and quantum decision support direction",
+      "Pattern recognition for complex, high dimensional data",
+      "Research friendly structure for model comparison and testing",
+      "Built for AI research teams and enterprise innovation groups",
+    ],
+    useCases: [
+      "Quantum machine learning",
+      "Decision support",
+      "Pattern recognition",
+      "AI research",
+    ],
+    architecture: [
+      "Data input",
+      "Quantum learning core",
+      "Model evaluation",
+      "Decision output",
+    ],
+  },
+  {
+    id: "qseo",
+    number: "07",
+    eyebrow: "Optimization layer",
+    title: "Quantum Search Engine Optimisation",
+    shortName: "QSEO",
+    icon: Search,
+    href: "https://qseo.quinfosys.com",
+    summary:
+      "QSEO applies quantum inspired optimization to search and ranking problems, helping teams process large scale relevance and discovery workloads faster.",
+    longCopy:
+      "Quantum Search Engine Optimisation brings quantum inspired optimization techniques to search, ranking, and discovery problems. The product direction targets large scale relevance modelling, content and keyword optimization, and search infrastructure teams that want a forward looking path toward quantum accelerated information retrieval.",
+    capabilities: [
+      "Quantum inspired ranking and relevance optimization",
+      "Large scale search and discovery workload support",
+      "Direction for content and keyword optimization at scale",
+      "Hybrid classical and quantum search infrastructure compatibility",
+      "Built for search platforms, publishers, and digital teams",
+    ],
+    useCases: [
+      "Search optimization",
+      "Ranking systems",
+      "Content discovery",
+      "Digital platforms",
+    ],
+    architecture: [
+      "Query input",
+      "Optimization core",
+      "Ranking output",
+      "Feedback loop",
     ],
   },
 ];
@@ -294,19 +428,32 @@ function ProductBlock({
             </div>
           </div>
 
-          <button
-            type="button"
-            onClick={onToggle}
-            aria-expanded={isOpen}
-            aria-controls={`${product.id}-details`}
-            className="mt-8 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.06] px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#f8f8f8] transition-all duration-300 hover:border-white/25 hover:bg-[#f8f8f8] hover:text-[#111111]"
-          >
-            {isOpen ? "Show less" : "Read more"}
-            <ChevronDown
-              className={`h-4 w-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-              strokeWidth={1.5}
-            />
-          </button>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              onClick={onToggle}
+              aria-expanded={isOpen}
+              aria-controls={`${product.id}-details`}
+              className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.06] px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#f8f8f8] transition-all duration-300 hover:border-white/25 hover:bg-[#f8f8f8] hover:text-[#111111]"
+            >
+              {isOpen ? "Show less" : "Read more"}
+              <ChevronDown
+                className={`h-4 w-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                strokeWidth={1.5}
+              />
+            </button>
+            {product.href && (
+              <a
+                href={product.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.06] px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#f8f8f8] transition-all duration-300 hover:border-white/25 hover:bg-[#f8f8f8] hover:text-[#111111]"
+              >
+                Visit product
+                <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
+              </a>
+            )}
+          </div>
         </div>
 
         <div className={isReversed ? "lg:order-1" : ""}>
@@ -417,7 +564,7 @@ export default function ProductsPage() {
               Products
             </p>
             <h1 className="text-4xl font-medium tracking-[-0.05em] text-[#f8f8f8] sm:text-5xl lg:text-7xl">
-              Three Quantum Products. One connected stack.
+              Seven Quantum Products. One connected stack.
             </h1>
             <p className="mt-8 max-w-3xl text-[1.02rem] font-light leading-8 text-slate-300 sm:text-lg sm:leading-9">
               Quinfosys products are structured as a connected quantum stack: a
@@ -474,44 +621,6 @@ export default function ProductsPage() {
               }
             />
           ))}
-        </div>
-      </section>
-
-      <section className="border-t border-slate-700/35 px-6 py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl">
-          <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate-500">
-            Extended stack
-          </p>
-          <h2 className="mb-8 text-3xl font-medium tracking-[-0.035em] text-[#f8f8f8] sm:text-4xl">
-            More from the Quantum product line.
-          </h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {externalProducts.map((product) => (
-              <a
-                key={product.id}
-                href={product.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.045] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.08]"
-              >
-                <div>
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">
-                    {product.shortName}
-                  </span>
-                  <p className="mt-2 text-base font-semibold tracking-tight text-[#f8f8f8]">
-                    {product.title}
-                  </p>
-                </div>
-                <div className="mt-6 flex items-center justify-between text-sm text-slate-400">
-                  <span className="truncate">{product.href.replace("https://", "")}</span>
-                  <ArrowUpRight
-                    className="h-4 w-4 shrink-0 text-slate-400 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#f8f8f8]"
-                    strokeWidth={1.7}
-                  />
-                </div>
-              </a>
-            ))}
-          </div>
         </div>
       </section>
 

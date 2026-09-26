@@ -1,9 +1,9 @@
 import {
   ArrowUp,
   BookOpen,
+  Calendar,
   Check,
   ChevronDown,
-  Code2,
   Download,
   FileText,
   GraduationCap,
@@ -29,6 +29,8 @@ type ResourceSection = {
   formats: string[];
   audience: string[];
   readingPath: string[];
+  audienceLabel?: string;
+  pathLabel?: string;
 };
 
 type ResourceFormat = {
@@ -40,34 +42,14 @@ type ResourceFormat = {
 
 const resourceSections: ResourceSection[] = [
   {
-    id: "qiscode",
+    id: "docs",
     number: "01",
-    eyebrow: "Platform resource",
-    title: "QisCode",
-    shortName: "QisCode",
-    icon: Code2,
-    summary:
-      "QisCode is presented as the central learning and technical reference layer for quantum design, simulation, transpilation, and execution workflows.",
-    longCopy:
-      "This section can become the resource home for QisCode guides, language notes, examples, workflow explanations, setup material, simulation references, and platform learning paths. It should help technical visitors understand how the system is structured before they move into deeper documentation or product pages.",
-    formats: ["Platform guides", "Example workflows", "Syntax notes", "Simulation references"],
-    audience: [
-      "Developers exploring quantum programming concepts",
-      "Students learning structured quantum workflows",
-      "Teams comparing platform direction and documentation depth",
-      "Technical partners reviewing future integration paths",
-    ],
-    readingPath: ["Start", "Understand", "Try", "Extend"],
-  },
-  {
-    id: "documentation",
-    number: "02",
     eyebrow: "Knowledge base",
-    title: "Documentation",
-    shortName: "Documentation",
+    title: "Docs",
+    shortName: "Docs",
     icon: BookOpen,
     summary:
-      "Documentation organizes product references, onboarding guides, technical explanations, and developer material in a clean content first structure.",
+      "Docs organizes product references, onboarding guides, technical explanations, and developer material in a clean content first structure.",
     longCopy:
       "This area is designed for practical reading. It can hold user guides, developer notes, API references, configuration explanations, onboarding pages, release notes, and implementation walkthroughs. The goal is to make the site useful for people who need clarity after they understand the company direction.",
     formats: ["User guides", "Developer notes", "API references", "Release notes"],
@@ -80,14 +62,14 @@ const resourceSections: ResourceSection[] = [
     readingPath: ["Locate", "Read", "Apply", "Return"],
   },
   {
-    id: "white-papers",
-    number: "03",
+    id: "papers",
+    number: "02",
     eyebrow: "Long form insight",
-    title: "White Papers",
-    shortName: "White Papers",
+    title: "Papers",
+    shortName: "Papers",
     icon: FileText,
     summary:
-      "White Papers provide deeper technical and strategic writing for quantum adoption, architecture planning, and future business readiness.",
+      "Papers provide deeper technical and strategic writing for quantum adoption, architecture planning, and future business readiness.",
     longCopy:
       "This section should feel more formal than documentation. It can support technical papers, industry explainers, architecture notes, adoption frameworks, security perspectives, quantum readiness material, and strategic briefings. The writing can be longer, more analytical, and more useful for leaders or institutional readers.",
     formats: ["Technical papers", "Strategy briefs", "Architecture notes", "Readiness guides"],
@@ -100,24 +82,21 @@ const resourceSections: ResourceSection[] = [
     readingPath: ["Frame", "Analyze", "Evaluate", "Decide"],
   },
   {
-    id: "case-studies",
-    number: "04",
-    eyebrow: "Application stories",
-    title: "Case Studies",
-    shortName: "Case Studies",
-    icon: Newspaper,
+    id: "events",
+    number: "03",
+    eyebrow: "Community & sessions",
+    title: "Events",
+    shortName: "Events",
+    icon: Calendar,
     summary:
-      "Case Studies create space for future use case stories, implementation examples, pilot summaries, and outcome based learning.",
+      "Events brings together upcoming and completed Quinfosys sessions, conclaves, and community gatherings in one place.",
     longCopy:
-      "This section is structured for future growth. As projects mature, it can explain the context, challenge, approach, technical pathway, and outcome of real or representative use cases. It helps visitors understand how Quinfosys thinking can translate into applied systems without turning the Resources page into a sales page.",
-    formats: ["Use case stories", "Pilot summaries", "Outcome notes", "Implementation examples"],
-    audience: [
-      "Clients comparing practical applications",
-      "Partners reviewing project potential",
-      "Students and professionals learning from examples",
-      "Teams studying how research becomes applied work",
-    ],
-    readingPath: ["Context", "Approach", "Outcome", "Learn"],
+      "This section tracks Quinfosys events as they are announced and as they wrap up. Upcoming sessions are listed here first, and the completed list grows as events take place, giving visitors a simple way to follow what is coming next and what has already happened.",
+    formats: ["Conclaves", "Meetups", "Webinars", "Workshops"],
+    audience: ["Quinfosys Conclave \u2013 August"],
+    audienceLabel: "Upcoming",
+    readingPath: [],
+    pathLabel: "Completed",
   },
 ];
 
@@ -163,15 +142,15 @@ const resourceNotes = [
   },
   {
     label: "Future ready",
-    text: "The structure can grow into guides, papers, documentation, and case studies.",
+    text: "The structure can grow into guides, papers, documentation, and events.",
   },
 ];
 
 function ResourcesHeroVisual() {
   const shelves = [
-    { label: "QisCode", icon: Code2, text: "Platform learning and examples" },
     { label: "Docs", icon: BookOpen, text: "Guides, references, and onboarding" },
     { label: "Papers", icon: FileText, text: "Strategic and technical depth" },
+    { label: "Events", icon: Calendar, text: "Upcoming and completed sessions" },
   ];
 
   return (
@@ -332,10 +311,10 @@ export default function ResourcesPage() {
               Resources
             </div>
             <h1 className="mt-9 max-w-3xl text-4xl font-medium leading-[1.05] tracking-[-0.06em] text-[#f8f8f8] sm:text-5xl lg:text-7xl">
-              A reading center for guides, documentation, papers, and applied stories.
+              A reading center for docs, papers, and events.
             </h1>
             <p className="mt-8 max-w-2xl text-base font-light leading-8 text-slate-300 sm:text-lg">
-              Resources gives Quinfosys a content oriented space for practical learning, technical references, platform material, white papers, and future case studies.
+              Resources gives Quinfosys a content oriented space for practical learning, technical references, papers, and upcoming or completed events.
             </p>
             <div className="mt-9 grid gap-3 sm:grid-cols-3">
               {resourceNotes.map((note) => (
@@ -441,7 +420,12 @@ export default function ResourcesPage() {
                             <p className="text-sm leading-7 text-slate-300">
                               {section.longCopy}
                             </p>
-                            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                            {section.audienceLabel && (
+                              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-100/70">
+                                {section.audienceLabel}
+                              </p>
+                            )}
+                            <div className={`grid gap-3 sm:grid-cols-2 ${section.audienceLabel ? "mt-3" : "mt-6"}`}>
                               {section.audience.map((item) => (
                                 <div
                                   key={item}
@@ -458,7 +442,7 @@ export default function ResourcesPage() {
 
                           <div className="rounded-[1.5rem] border border-white/[0.07] bg-[#141414]/48 p-6 sm:p-7">
                             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-100/70">
-                              Reading path
+                              {section.pathLabel ?? "Reading path"}
                             </p>
                             <div className="mt-5 space-y-3">
                               {section.readingPath.map((step, stepIndex) => (
@@ -521,7 +505,7 @@ export default function ResourcesPage() {
                 Use this page as the public knowledge center for Quinfosys.
               </h2>
               <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-400 sm:text-base">
-                The structure is ready for documentation, QisCode material, white papers, case studies, technical guides, and future downloadable content.
+                The structure is ready for documentation, papers, event updates, technical guides, and future downloadable content.
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
