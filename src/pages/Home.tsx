@@ -346,7 +346,7 @@ export default function Home() {
       <section
         id="quantum-portfolio"
         ref={portfolioSectionRef}
-        className="relative z-10 flex min-h-screen w-full flex-col justify-center border-t border-slate-700/35 bg-gradient-to-br from-[#171717] via-[#0d0d0d] to-[#080808] px-5 py-20 shadow-[0_-20px_50px_rgba(0,0,0,0.5)] sm:px-6 lg:sticky lg:top-0 lg:h-screen lg:py-0">
+        className="relative z-10 flex w-full flex-col justify-center border-t border-slate-700/35 bg-gradient-to-br from-[#171717] via-[#0d0d0d] to-[#080808] px-5 py-20 shadow-[0_-20px_50px_rgba(0,0,0,0.5)] sm:px-6">
         <div className="mx-auto w-full max-w-7xl">
           <FadeInSection>
             <p className="mb-4 text-center text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-500">
@@ -361,7 +361,7 @@ export default function Home() {
             </p>
           </FadeInSection>
 
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {productPortfolio.map((item, index) => (
               <ProductInfographicCard
                 key={item.title}
