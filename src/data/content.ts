@@ -14,7 +14,7 @@ export type ContentItem = {
 export const company = {
   brand: 'Quinfosys™',
   legalName: 'Quinfosys Private Limited',
-  tagline: 'Entangle with Quinfosys™',
+  tagline: 'Entangle with Quantum',
   address: 'T-Hub, 7th Floor, Hyderabad Knowledge City, Hyderabad, Telangana, India - 500081',
   email: 'info@quinfosys.com',
   phone: '+91 9059237828',
@@ -23,6 +23,7 @@ export const company = {
 export const navigation: NavItem[] = [
   { label: 'Products', href: '/products' },
   { label: 'Solutions', href: '/solutions' },
+  { label: 'Industries', href: '/industries' },
   { label: 'Services', href: '/services' },
   { label: 'Research', href: '/research-development' },
   { label: 'Resources', href: '/resources' },

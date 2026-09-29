@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import PageShell from './layout/PageShell';
 import CompanyPage from './pages/CompanyPage';
 import Home from './pages/Home';
+import IndustriesPage from './pages/IndustriesPage';
 import NotFound from './pages/NotFound';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
@@ -72,6 +73,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<RoutedPage><ProductsPage /></RoutedPage>} />
         <Route path="/solutions" element={<RoutedPage><SolutionsPage /></RoutedPage>} />
+        <Route path="/industries" element={<RoutedPage><IndustriesPage /></RoutedPage>} />
         <Route path="/services" element={<RoutedPage><ServicesPage /></RoutedPage>} />
         <Route path="/research-development" element={<RoutedPage><ResearchDevelopmentPage /></RoutedPage>} />
         <Route path="/resources" element={<RoutedPage><ResourcesPage /></RoutedPage>} />

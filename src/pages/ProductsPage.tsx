@@ -69,14 +69,14 @@ const products: ProductSection[] = [
     id: "qiscode",
     number: "02",
     eyebrow: "Platform layer",
-    title: "Quantum Code Platform",
-    shortName: "QISCode",
+    title: "QisCode - Quantum IDE Platform",
+    shortName: "QisCode - Quantum IDE Platform",
     icon: Terminal,
     href: "https://qiscode.quinfosys.com",
     summary:
-      "QISCode is the unified quantum computing platform for designing, simulating, transpiling, and executing quantum programs in one connected workspace.",
+      "QisCode - Quantum IDE Platform is the unified quantum computing platform for designing, simulating, transpiling, and executing quantum programs in one connected workspace.",
     longCopy:
-      "QISCode brings the full quantum development cycle into a single platform. The product direction covers circuit design, simulation, transpilation across backends, and execution management, giving developers and research teams a consistent workspace instead of stitching together separate tools for each stage of quantum program development.",
+      "QisCode - Quantum IDE Platform brings the full quantum development cycle into a single platform. The product direction covers circuit design, simulation, transpilation across backends, and execution management, giving developers and research teams a consistent workspace instead of stitching together separate tools for each stage of quantum program development.",
     capabilities: [
       "Unified workspace for quantum circuit design and editing",
       "Built in simulation for testing before hardware execution",

@@ -76,8 +76,11 @@ const socialLinks = [
 ];
 
 const legalLinks = [
-  { label: 'Privacy Policy', href: '/privacy-policy' },
-  { label: 'Terms of Service', href: '/terms-of-service' },
+  { label: 'Privacy Policy', href: 'https://quinfosys.com/privacy-policy' },
+  { label: 'Terms and conditions', href: 'https://quinfosys.com/terms-of-service' },
+  { label: 'Cookie Policy', href: 'https://qns.quinfosys.com/#' },
+  { label: 'Refunds / Cancellations', href: 'https://qns.quinfosys.com/#' },
+  { label: 'Shipping Policy', href: 'https://qns.quinfosys.com/#' },
 ];
 
 export default function Footer() {
@@ -149,9 +152,15 @@ export default function Footer() {
             <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Legal</h3>
             <div className="mt-5 grid gap-3 text-sm text-slate-600">
               {legalLinks.map((item) => (
-                <Link key={item.href} to={item.href} className="transition-colors hover:text-[#111111]">
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-[#111111]"
+                >
                   {item.label}
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -160,7 +169,7 @@ export default function Footer() {
 
       <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-3 border-t border-slate-200 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 {company.legalName}. All rights reserved.</p>
-        <p>{company.tagline}</p>
+        <p>Quinfosys - Entangle with Quantum</p>
       </div>
     </footer>
   );

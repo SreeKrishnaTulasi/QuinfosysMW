@@ -1,18 +1,22 @@
 import {
   ArrowRight,
   BookOpen,
+  BrainCircuit,
   ChartBar,
   ChevronRight,
   Cloud,
   Code2,
   Cpu,
   FileText,
+  FlaskConical,
   Globe,
   GraduationCap,
   Layers,
   Network,
   RadioTower,
+  Search,
   Shield,
+  Terminal,
   Workflow,
   Zap,
 } from "lucide-react";
@@ -54,10 +58,40 @@ const productPortfolio: ProductVisual[] = [
     href: "/products#qucpl",
   },
   {
+    icon: <Terminal strokeWidth={1.5} />,
+    title: "QisCode - Quantum IDE Platform",
+    desc: "Unified quantum computing platform for designing, simulating, transpiling, and executing quantum programs.",
+    href: "/products#qiscode",
+  },
+  {
+    icon: <FlaskConical strokeWidth={1.5} />,
+    title: "Quantum Drug Discovery",
+    desc: "Quantum accelerated molecular simulation and candidate screening for pharma and life sciences research.",
+    href: "/products#qdd",
+  },
+  {
+    icon: <Network strokeWidth={1.5} />,
+    title: "Quantum Network System",
+    desc: "Connectivity layer for secure, distributed quantum enabled communication and networking infrastructure.",
+    href: "/products#qns",
+  },
+  {
+    icon: <BrainCircuit strokeWidth={1.5} />,
+    title: "Quantum Brain",
+    desc: "Cognition layer combining quantum computing with AI for quantum enhanced learning and decision systems.",
+    href: "/products#brain",
+  },
+  {
     icon: <Cloud strokeWidth={1.5} />,
     title: "QCS Cloud",
     desc: "On-demand quantum cloud infrastructure for secure workload access and hybrid execution.",
     href: "/products#qcs",
+  },
+  {
+    icon: <Search strokeWidth={1.5} />,
+    title: "Quantum Search Engine Optimisation",
+    desc: "Quantum inspired optimization for search, ranking, and large scale relevance and discovery workloads.",
+    href: "/products#qseo",
   },
   {
     icon: <Globe strokeWidth={1.5} />,
@@ -126,7 +160,7 @@ function HeroTextContent({
             style={headingStyle}
           >
             Entangle with <br className="hidden md:block" />
-            <span>Quinfosys.</span>
+            <span>Quantum.</span>
           </h1>
         </div>
         <div className={staticFadeClass}>
@@ -152,7 +186,7 @@ function HeroTextContent({
           style={headingStyle}
         >
           Entangle with <br className="hidden md:block" />
-          <span>Quinfosys.</span>
+          <span>Quantum.</span>
         </h1>
       </FadeInSection>
       <FadeInSection delay={300}>

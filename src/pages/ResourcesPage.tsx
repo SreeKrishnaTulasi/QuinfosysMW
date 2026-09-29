@@ -92,8 +92,8 @@ const resourceSections: ResourceSection[] = [
       "Events brings together upcoming and completed Quinfosys sessions, conclaves, and community gatherings in one place.",
     longCopy:
       "This section tracks Quinfosys events as they are announced and as they wrap up. Upcoming sessions are listed here first, and the completed list grows as events take place, giving visitors a simple way to follow what is coming next and what has already happened.",
-    formats: ["Conclaves", "Meetups", "Webinars", "Workshops"],
-    audience: ["Quinfosys Quantum Industry Conclave 2028 \u2014 August 20, 2027"],
+    formats: ["Conclave", "Meetups", "Seminars", "Workshops", "Summit"],
+    audience: ["Quinfosys Quantum Industry Conclave 2027 \u2014 August 20, 2027"],
     audienceLabel: "Upcoming",
     readingPath: [],
     pathLabel: "Completed",
@@ -426,17 +426,41 @@ export default function ResourcesPage() {
                               </p>
                             )}
                             <div className={`grid gap-3 sm:grid-cols-2 ${section.audienceLabel ? "mt-3" : "mt-6"}`}>
-                              {section.audience.map((item) => (
-                                <div
-                                  key={item}
-                                  className="flex gap-3 rounded-2xl border border-white/[0.07] bg-[#141414]/50 p-4"
-                                >
-                                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-zinc-100" strokeWidth={1.7} />
-                                  <p className="text-sm leading-6 text-slate-300">
-                                    {item}
-                                  </p>
-                                </div>
-                              ))}
+                              {section.id === "events"
+                                ? section.audience.map((item) => {
+                                    const [eventName, eventDate] = item.split(" \u2014 ");
+                                    return (
+                                      <div
+                                        key={item}
+                                        className="flex items-center gap-3 rounded-2xl border border-white/[0.07] bg-[#050505]/65 p-4 sm:col-span-2"
+                                      >
+                                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-zinc-100">
+                                          <section.icon className="h-4.5 w-4.5" strokeWidth={1.6} />
+                                        </span>
+                                        <div className="min-w-0">
+                                          <p className="text-sm font-semibold leading-6 text-[#f8f8f8]">
+                                            {eventName}
+                                          </p>
+                                          {eventDate && (
+                                            <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-slate-400">
+                                              {eventDate}
+                                            </p>
+                                          )}
+                                        </div>
+                                      </div>
+                                    );
+                                  })
+                                : section.audience.map((item) => (
+                                    <div
+                                      key={item}
+                                      className="flex gap-3 rounded-2xl border border-white/[0.07] bg-[#141414]/50 p-4"
+                                    >
+                                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-zinc-100" strokeWidth={1.7} />
+                                      <p className="text-sm leading-6 text-slate-300">
+                                        {item}
+                                      </p>
+                                    </div>
+                                  ))}
                             </div>
                           </div>
 
