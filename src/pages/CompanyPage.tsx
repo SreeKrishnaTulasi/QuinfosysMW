@@ -180,14 +180,14 @@ const newsItems: NewsItem[] = [
     title:
       "Quinfosys™ and VR Siddhartha Engineering College Signed MoU to Establish Centre of Excellence for Quantum Computing",
     fullContent:
-      "Hyderabad, November 11, 2024 – Quinfosys™ , a pioneering company in quantum technologies, and Velagapudi Ramakrishna Siddhartha Engineering College (V R Siddhartha College) Deemed to be University have formalized a strategic partnership aimed at creating a state-of-the-art Centre of Excellence (CoE) for Quantum Computing...",
+      "Hyderabad, November 11, 2024 - Quinfosys™ , a pioneering company in quantum technologies, and Velagapudi Ramakrishna Siddhartha Engineering College (V R Siddhartha College) Deemed to be University have formalized a strategic partnership aimed at creating a state-of-the-art Centre of Excellence (CoE) for Quantum Computing...",
   },
   {
     imageUrl: quinfocbitImage,
     title:
       "Quinfosys Pvt Ltd and CBIT Join Forces to Drive Innovation and Skill Development",
     fullContent:
-      "Hyderabad, October 5, 2024 – In a significant move to enhance industry-academia collaboration, Quinfosys Pvt Ltd has signed a Memorandum of Understanding (MOU) with Chaitanya Bharathi Institute of Technology (CBIT)...",
+      "Hyderabad, October 5, 2024 - In a significant move to enhance industry-academia collaboration, Quinfosys Pvt Ltd has signed a Memorandum of Understanding (MOU) with Chaitanya Bharathi Institute of Technology (CBIT)...",
   },
 ];
 
@@ -233,7 +233,7 @@ const jobs: JobDescription[] = [
       {
         type: "list",
         items: [
-          "Bachelor’s or Master’s degree in Business, Engineering, Computer Science, or a related field; an MBA or advanced degree is highly preferred.",
+          "Bachelor’s or Master’s degree in Business, Engineering, Computer Science, or a related field. An MBA or advanced degree is highly preferred.",
           "Preference will be given to graduates from IIM (Indian Institutes of Management) or IIT (Indian Institutes of Technology).",
           "A deep understanding of quantum computing principles and the broader IT landscape.",
           "Proven experience in strategic planning, market analysis, or business development within a technology-driven environment.",
@@ -257,7 +257,7 @@ const jobs: JobDescription[] = [
       {
         type: "paragraph",
         content:
-          "Interested candidates should submit their resume, cover letter, and any relevant portfolio materials to careers@quinfosys.com with the subject line \"Quantum Business Strategist Application – Your Name.\" We look forward to exploring how you can contribute to our groundbreaking journey.",
+          "Interested candidates should submit their resume, cover letter, and any relevant portfolio materials to careers@quinfosys.com with the subject line \"Quantum Business Strategist Application - Your Name.\" We look forward to exploring how you can contribute to our groundbreaking journey.",
       },
     ],
   },
@@ -330,7 +330,7 @@ const jobs: JobDescription[] = [
       {
         type: "paragraph",
         content:
-          "Please submit your resume, cover letter, and any relevant research or project portfolio to careers@quinfosys.com with the subject line \"Quantum Software Engineer: Application – Your Name.\" We look forward to your application and hope to welcome you to our team!",
+          "Please submit your resume, cover letter, and any relevant research or project portfolio to careers@quinfosys.com with the subject line \"Quantum Software Engineer: Application - Your Name.\" We look forward to your application and hope to welcome you to our team!",
       },
       { type: "heading", content: "Equal Opportunity Employer" },
       {

@@ -135,7 +135,7 @@ const PrivacyPolicy: React.FC = () => {
       </p>
 
       <h3 className="mt-6 mb-2 border-b border-[#d4d4d4] pb-1 text-lg font-semibold text-[#111111]">Information Automatically Collected</h3>
-      <p className="mb-3"><strong>In Short:</strong> Some information — such as your Internet Protocol (IP) address and/or browser and device characteristics — is collected automatically when you visit our Services.</p>
+      <p className="mb-3"><strong>In Short:</strong> Some information - such as your Internet Protocol (IP) address and/or browser and device characteristics - is collected automatically when you visit our Services.</p>
       <p className="mb-3">
         We automatically collect certain information when you visit, use, or navigate the Services. This information does not reveal your specific identity (like your name or contact information) but may include device and usage information, such as your IP address, browser and device characteristics, operating system, language preferences, referring URLs, device name, country, location, information about how and when you use our Services, and other technical information. This information is primarily needed to maintain the security and operation of our Services, and for our internal analytics and reporting purposes. Like many businesses, we also collect information through cookies and similar technologies. The information we collect includes:
       </p>
@@ -273,7 +273,7 @@ const PrivacyPolicy: React.FC = () => {
         However, please note that this will not affect the lawfulness of the processing before its withdrawal nor, when applicable law allows, will it affect the processing of your personal information conducted in reliance on lawful processing grounds other than consent.
       </p>
       <p className="mb-3">
-        <strong>Opting out of marketing and promotional communications:</strong> You can unsubscribe from our marketing and promotional communications at any time by clicking on the unsubscribe link in the emails that we send, replying 'STOP' or 'UNSUBSCRIBE' to the SMS messages that we send, or by contacting us using the details provided in the section 'HOW CAN YOU CONTACT US ABOUT THIS NOTICE?' below. You will then be removed from the marketing lists. However, we may still communicate with you — for example, to send you service-related messages that are necessary for the administration and use of your account, to respond to service requests, or for other non-marketing purposes.
+        <strong>Opting out of marketing and promotional communications:</strong> You can unsubscribe from our marketing and promotional communications at any time by clicking on the unsubscribe link in the emails that we send, replying 'STOP' or 'UNSUBSCRIBE' to the SMS messages that we send, or by contacting us using the details provided in the section 'HOW CAN YOU CONTACT US ABOUT THIS NOTICE?' below. You will then be removed from the marketing lists. However, we may still communicate with you - for example, to send you service-related messages that are necessary for the administration and use of your account, to respond to service requests, or for other non-marketing purposes.
       </p>
       <p className="mb-3">
         <strong>Account Information:</strong> If you would at any time like to review or change the information in your account or terminate your account, you can:
@@ -376,7 +376,7 @@ const PrivacyPolicy: React.FC = () => {
       </div>
 
       <h4 className="mb-2 text-base font-semibold text-slate-800">We Will Use and Retain the Collected Personal Information As Needed</h4>
-      <p className="mb-3"><strong>Category L – 96 months</strong></p>
+      <p className="mb-3"><strong>Category L - 96 months</strong></p>
       <p className="mb-4">Category L information may be used, or disclosed to a service provider or contractor, for additional, specified purposes. You have the right to limit the use or disclosure of your sensitive personal information.</p>
 
       <h4 className="mb-2 text-base font-semibold text-slate-800">How Do We Use and Share Your Personal Information?</h4>
@@ -392,8 +392,8 @@ const PrivacyPolicy: React.FC = () => {
       <h4 className="mb-2 text-base font-semibold text-slate-800">CCPA Privacy Notice</h4>
       <p className="mb-3">This section applies only to California residents. Under the California Consumer Privacy Act (CCPA), you have the rights listed below.</p>
       <ul className="list-disc pl-6 mb-3 space-y-1">
-        <li>Right to request deletion of the data — Request to delete</li>
-        <li>Right to be informed — Request to know</li>
+        <li>Right to request deletion of the data - Request to delete</li>
+        <li>Right to be informed - Request to know</li>
         <li>Right to Non-Discrimination for the Exercise of a Consumer's Privacy Rights</li>
         <li>Right to Limit Use and Disclosure of Sensitive Personal Information</li>
       </ul>
@@ -415,32 +415,32 @@ const PrivacyPolicy: React.FC = () => {
       <h4 className="mb-2 text-base font-semibold text-slate-800">Connecticut Residents</h4>
       <p className="mb-3">This section applies only to Connecticut residents. Under the Connecticut Data Privacy Act (CDPA), you have the rights listed below.</p>
       <ul className="list-disc pl-6 mb-3 space-y-1">
-        <li>Right to Access — Request access to your personal data</li>
-        <li>Right to Correct — Request correction of your personal data</li>
-        <li>Right to Delete — Request deletion of your personal data</li>
-        <li>Right to Data Portability — Request a copy of your personal data</li>
-        <li>Right to Opt-Out — Request to opt-out of certain processing activities</li>
+        <li>Right to Access - Request access to your personal data</li>
+        <li>Right to Correct - Request correction of your personal data</li>
+        <li>Right to Delete - Request deletion of your personal data</li>
+        <li>Right to Data Portability - Request a copy of your personal data</li>
+        <li>Right to Opt-Out - Request to opt-out of certain processing activities</li>
       </ul>
       <p className="mb-4">To submit a request to exercise these rights described above, please email <a href="mailto:contact@quinfosys.com" className="font-medium text-[#111111] hover:underline">contact@quinfosys.com</a></p>
 
       <h4 className="mb-2 text-base font-semibold text-slate-800">Utah Residents</h4>
       <p className="mb-3">This section applies only to Utah residents. Under the Utah Consumer Privacy Act (UCPA), you have the rights listed below.</p>
       <ul className="list-disc pl-6 mb-3 space-y-1">
-        <li>Right to Know — Request access to your personal data</li>
-        <li>Right to Delete — Request deletion of your personal data</li>
-        <li>Right to Data Portability — Request a copy of your personal data</li>
-        <li>Right to Opt-Out — Request to opt-out of certain processing activities</li>
+        <li>Right to Know - Request access to your personal data</li>
+        <li>Right to Delete - Request deletion of your personal data</li>
+        <li>Right to Data Portability - Request a copy of your personal data</li>
+        <li>Right to Opt-Out - Request to opt-out of certain processing activities</li>
       </ul>
       <p className="mb-4">To submit a request to exercise these rights described above, please email <a href="mailto:contact@quinfosys.com" className="font-medium text-[#111111] hover:underline">contact@quinfosys.com</a></p>
 
       <h4 className="mb-2 text-base font-semibold text-slate-800">Virginia Residents</h4>
       <p className="mb-3">This section applies only to Virginia residents. Under the Virginia Consumer Data Protection Act (VCDPA), you have the rights listed below.</p>
       <ul className="list-disc pl-6 mb-3 space-y-1">
-        <li>Right to Access — Request access to your personal data</li>
-        <li>Right to Correct — Request correction of your personal data</li>
-        <li>Right to Delete — Request deletion of your personal data</li>
-        <li>Right to Data Portability — Request a copy of your personal data</li>
-        <li>Right to Opt-Out — Request to opt-out of certain processing activities</li>
+        <li>Right to Access - Request access to your personal data</li>
+        <li>Right to Correct - Request correction of your personal data</li>
+        <li>Right to Delete - Request deletion of your personal data</li>
+        <li>Right to Data Portability - Request a copy of your personal data</li>
+        <li>Right to Opt-Out - Request to opt-out of certain processing activities</li>
       </ul>
       <p className="mb-4">To submit a request to exercise these rights described above, please email <a href="mailto:contact@quinfosys.com" className="font-medium text-[#111111] hover:underline">contact@quinfosys.com</a></p>
 

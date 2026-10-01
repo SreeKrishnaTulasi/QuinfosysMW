@@ -27,7 +27,7 @@ src/
 ```
 
 Global navigation: Products | Technologies | Industries | Services | Research | Resources | Company.
-The logo links to https://quinfosys.com; there is no separate Home item.
+The logo links to https://quinfosys.com. There is no separate Home item.
 
 Routes: `/products`, `/technologies`, `/industries`, `/services`, `/research`, `/resources`, `/company`.
 `/solutions` redirects to `/industries` and `/research-development` redirects to `/research`.

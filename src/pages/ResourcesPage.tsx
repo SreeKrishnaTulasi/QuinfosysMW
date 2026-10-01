@@ -219,7 +219,7 @@ const resourceSections: ResourceSection[] = [
       "This section tracks Quinfosys events as they are announced and as they wrap up. Upcoming sessions are listed here first, and the completed list grows as events take place, giving visitors a simple record of Quinfosys community activity.",
     formats: ["Conclave", "Meetups", "Seminars", "Workshops", "Summit"],
     audience: [
-      "Quinfosys Quantum Industry Conclave 2027 — August 20, 2027",
+      "Quinfosys Quantum Industry Conclave 2027 - August 20, 2027",
     ],
     audienceLabel: "Upcoming",
     readingPath: [],
