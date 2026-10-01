@@ -87,24 +87,24 @@ const productPortfolio: ProductVisual[] = [
   },
 ];
 
-const solutionPortfolio: SolutionVisual[] = [
-  {
-    icon: <Workflow strokeWidth={1.5} />,
-    title: "Enterprise Strategy",
-    desc: "Quantum adoption roadmaps for enterprise transformation.",
-    href: "/solutions#enterprise-strategy",
-  },
+const technologyPortfolio: SolutionVisual[] = [
   {
     icon: <Cpu strokeWidth={1.5} />,
-    title: "Quantum Optimization",
-    desc: "Optimization gates for logistics, allocation, and operating models.",
-    href: "/solutions#optimization",
+    title: "Quantum Computing",
+    desc: "Circuit models, qubit systems, and algorithms for quantum computation.",
+    href: "/technologies#quantum-computing",
+  },
+  {
+    icon: <Network strokeWidth={1.5} />,
+    title: "Quantum Networks",
+    desc: "Distributed quantum systems, protocols, and secure connectivity.",
+    href: "/technologies#quantum-networks",
   },
   {
     icon: <Shield strokeWidth={1.5} />,
-    title: "Quantum-Safe Security",
-    desc: "Future-facing cryptography, key exchange, and secure infrastructure.",
-    href: "/solutions#security",
+    title: "Quantum Security",
+    desc: "Post quantum cryptography, key distribution, and crypto-agility.",
+    href: "/technologies#quantum-security",
   },
 ];
 
@@ -187,22 +187,28 @@ function HeroTextContent({
 
 const gatewayGroups = [
   {
+    title: "Industries",
+    href: "/industries",
+    icon: <Zap strokeWidth={1.5} />,
+    items: ["Quantum FinTech", "Quantum Drug Discovery", "Quantum Energy"],
+  },
+  {
     title: "Services",
     href: "/services",
     icon: <GraduationCap strokeWidth={1.5} />,
-    items: ["Consulting", "Implementation", "Support", "Training"],
+    items: ["Technology Consulting", "Software Development", "Training & Certification"],
   },
   {
-    title: "Research & Development",
-    href: "/research-development",
+    title: "Research",
+    href: "/research",
     icon: <RadioTower strokeWidth={1.5} />,
-    items: ["Research Areas", "Research Programs", "Publications", "Patents"],
+    items: ["Research Areas", "Publications", "Patents"],
   },
   {
     title: "Resources",
     href: "/resources",
     icon: <BookOpen strokeWidth={1.5} />,
-    items: ["Docs", "Papers", "Events"],
+    items: ["Documentation", "Whitepapers", "Events"],
   },
 ];
 
@@ -364,29 +370,29 @@ export default function Home() {
           <div className="w-full flex-1 lg:pr-10">
             <FadeInSection>
               <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-500">
-                Solutions
+                Technologies
               </p>
               <h2 className="mb-6 text-4xl font-medium leading-[1.1] tracking-tighter text-[#f8f8f8] md:text-6xl">
-                Quantum Solutions Portfolio.
+                Quantum Technologies Portfolio.
               </h2>
               <p className="mb-8 max-w-md text-base font-light leading-8 text-slate-300 md:text-lg">
-                Industry-specific solution gates designed to cut through
-                operational complexity without overloading the homepage.
+                Core scientific and engineering domains developed by
+                Quinfosys, supporting multiple industries and solutions.
               </p>
             </FadeInSection>
 
             <div className="space-y-4">
-              {solutionPortfolio.map((item, index) => (
+              {technologyPortfolio.map((item, index) => (
                 <SolutionLine key={item.title} item={item} index={index} />
               ))}
             </div>
 
             <FadeInSection delay={420}>
               <Link
-                to="/solutions"
+                to="/technologies"
                 className="mt-9 inline-flex items-center gap-2 rounded-full border border-slate-700/45 px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-300 transition-colors hover:border-white/30 hover:text-[#f8f8f8]"
               >
-                Open solutions page <ArrowRight className="h-3.5 w-3.5" />
+                Open technologies page <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </FadeInSection>
           </div>
@@ -412,7 +418,7 @@ export default function Home() {
             </p>
           </FadeInSection>
 
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2">
             {gatewayGroups.map((group, index) => (
               <FadeInSection
                 key={group.title}
@@ -458,8 +464,8 @@ export default function Home() {
               The future is here.
             </h2>
             <p className="mx-auto mb-10 max-w-2xl text-xl font-light tracking-tight text-slate-600">
-              Navigate through products, solutions, services, research, and
-              resources without overloading the homepage.
+              Navigate through products, technologies, industries, services,
+              research, and resources without overloading the homepage.
             </p>
             <a
               href={mailToSales}

@@ -72,10 +72,34 @@ type JobDescription = {
 };
 
 const sectionLinks = [
-  { label: "About Us", href: "#about-us" },
+  { label: "About Quinfosys", href: "#about-us" },
   { label: "Leadership", href: "#leadership" },
-  { label: "Updates and Partnerships", href: "#updates-partnerships" },
+  { label: "Vision & Mission", href: "#vision-mission" },
+  { label: "Partners", href: "#partners" },
+  { label: "Investors", href: "#investors" },
   { label: "Careers", href: "#careers" },
+  { label: "Contact", href: "#contact" },
+];
+
+const investorItems = [
+  {
+    title: "Company",
+    text: "Quinfosys Private Limited was established in August 2023 and is headquartered in Hyderabad, India.",
+  },
+  {
+    title: "Focus",
+    text: "Quantum products, technologies, industry solutions, services, and research for enterprises worldwide.",
+  },
+  {
+    title: "Investor Relations",
+    text: `For investor enquiries, write to ${company.email}.`,
+  },
+];
+
+const contactItems = [
+  { title: "Email", text: company.email },
+  { title: "Phone", text: company.phone },
+  { title: "Address", text: company.address },
 ];
 
 const values = [
@@ -457,10 +481,10 @@ function ValueConstellation() {
   );
 }
 
-function AboutPurposePanel() {
+function AboutPurposePanel({ items = purposeItems }: { items?: { title: string; text: string }[] }) {
   return (
     <div className="grid gap-5 lg:grid-cols-3">
-      {purposeItems.map((item, index) => (
+      {items.map((item, index) => (
         <FadeInSection key={item.title} delay={index * 120} className="h-full">
           <div className="group h-full rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 shadow-[0_26px_90px_rgba(0,0,0,0.18)] backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.065]">
             <div className="mb-5 flex items-center gap-4">
@@ -679,7 +703,7 @@ export default function CompanyPage() {
 
       <SectionShell
         id="about-us"
-        label="About Us"
+        label="About Quinfosys"
         title="Quinfosys Private Limited"
       >
         <div className="grid gap-12 lg:grid-cols-[1.618fr_1fr] lg:items-stretch lg:gap-18 xl:gap-20">
@@ -700,13 +724,6 @@ export default function CompanyPage() {
           <AboutInfographic />
         </div>
 
-        <div className="mt-10">
-          <AboutPurposePanel />
-        </div>
-
-        <div className="mt-10">
-          <ValueConstellation />
-        </div>
       </SectionShell>
 
       <SectionShell
@@ -720,10 +737,23 @@ export default function CompanyPage() {
       </SectionShell>
 
       <SectionShell
-        id="updates-partnerships"
-        label="Updates and Partnerships"
-        title="MoUs, News, and Partner Updates"
+        id="vision-mission"
+        label="Vision & Mission"
+        title="Where Quinfosys is going, and why"
         tone="soft"
+      >
+        <AboutPurposePanel />
+
+        <div className="mt-10">
+          <ValueConstellation />
+        </div>
+      </SectionShell>
+
+      <SectionShell
+        id="partners"
+        label="Partners"
+        title="MoUs, News, and Partner Updates"
+        tone="deeper"
       >
         <div className="grid gap-12 lg:grid-cols-[1fr_1.618fr] lg:items-start lg:gap-16">
           <div>
@@ -814,6 +844,21 @@ export default function CompanyPage() {
         </div>
       </SectionShell>
 
+      <SectionShell
+        id="investors"
+        label="Investors"
+        title="Investing in the quantum era"
+        tone="soft"
+      >
+        <AboutPurposePanel items={investorItems} />
+        <FadeInSection delay={160}>
+          <a href={`mailto:${company.email}?subject=${encodeURIComponent("Investor inquiry")}`} className="mt-10 inline-flex items-center gap-3 rounded-full bg-[#111111] px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-[0_24px_80px_rgba(17,17,17,0.28)] transition-transform duration-300 hover:scale-[1.03]">
+            <Mail className="h-4 w-4" strokeWidth={1.5} />
+            Investor inquiries
+          </a>
+        </FadeInSection>
+      </SectionShell>
+
       <SectionShell id="careers" label="Careers" title="Careers" tone="deeper">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.618fr] lg:items-start lg:gap-16">
           <FadeInSection>
@@ -874,6 +919,21 @@ export default function CompanyPage() {
             })}
           </div>
         </div>
+      </SectionShell>
+
+      <SectionShell
+        id="contact"
+        label="Contact"
+        title="Get in touch with Quinfosys"
+        tone="soft"
+      >
+        <AboutPurposePanel items={contactItems} />
+        <FadeInSection delay={160}>
+          <a href={mailToInfo} className="mt-10 inline-flex items-center gap-3 rounded-full bg-[#111111] px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-[0_24px_80px_rgba(17,17,17,0.28)] transition-transform duration-300 hover:scale-[1.03]">
+            <Mail className="h-4 w-4" strokeWidth={1.5} />
+            {company.email}
+          </a>
+        </FadeInSection>
       </SectionShell>
 
       <div className="sr-only">

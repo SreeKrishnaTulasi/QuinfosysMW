@@ -4,9 +4,13 @@ import {
   ChevronDown,
   ClipboardCheck,
   GraduationCap,
-  Headphones,
+  BrainCircuit,
+  Code2,
+  Cpu,
+  FlaskConical,
+  Network,
+  ShieldCheck,
   Mail,
-  Rocket,
   Sparkles,
   Wrench,
   type LucideIcon,
@@ -26,20 +30,21 @@ type ServiceSection = {
   engagementFocus: string[];
   outcomes: string[];
   workingModel: string[];
+  solutions?: string[];
 };
 
 const services: ServiceSection[] = [
   {
-    id: "consulting",
+    id: "quantum-technology-consulting",
     number: "01",
     eyebrow: "Advisory layer",
-    title: "Quantum Strategy Consulting",
+    title: "Quantum Technology Consulting",
     shortName: "Consulting",
     icon: ClipboardCheck,
     summary:
-      "Quantum Strategy Consulting helps organizations understand where quantum technologies can create practical value before they invest in platforms, pilots, or internal teams.",
+      "Quantum Technology Consulting helps organizations understand where quantum technologies can create practical value before they invest in platforms, pilots, or internal teams.",
     longCopy:
-      "This service is designed for leaders who need clarity before execution. Quinfosys reviews business priorities, current systems, technical readiness, and adoption constraints to define a realistic quantum roadmap. The work focuses on useful opportunity discovery, investment direction, capability planning, and clear decision support for teams that want to move from curiosity to structured action.",
+      "This service is designed for leaders who need clarity before execution. Quinfosys reviews business priorities, current systems, technical readiness, and adoption constraints to define a realistic quantum roadmap, covering use case discovery, feasibility mapping, and phased adoption planning.",
     engagementFocus: [
       "Business and technical readiness review",
       "Quantum opportunity discovery across departments and systems",
@@ -56,97 +61,203 @@ const services: ServiceSection[] = [
     workingModel: ["Discover", "Assess", "Prioritize", "Plan"],
   },
   {
-    id: "implementation",
+    id: "ai-consulting-development",
     number: "02",
-    eyebrow: "Execution layer",
-    title: "Quantum Implementation Services",
-    shortName: "Implementation",
-    icon: Rocket,
+    eyebrow: "Intelligence layer",
+    title: "AI Consulting & Development",
+    shortName: "AI Services",
+    icon: BrainCircuit,
     summary:
-      "Quantum Implementation Services support the practical deployment, integration, testing, and handover of quantum ready systems inside real organizational workflows.",
+      "AI Consulting & Development helps organizations plan, build, and deploy artificial intelligence and quantum AI systems around real business problems.",
     longCopy:
-      "This service turns selected opportunities into working technical paths. Quinfosys helps teams plan architecture, integrate quantum tools with classical systems, validate outputs, prepare workflows, and move prototypes toward controlled operational use. The emphasis is careful execution, clean documentation, and a handover model that allows client teams to understand what has been built and how it can evolve.",
+      "This service covers the journey from AI opportunity assessment to working systems. Quinfosys advises on data readiness and model approach, develops AI applications and pipelines, and explores where quantum AI methods can extend classical machine learning for decision and pattern recognition workloads.",
     engagementFocus: [
-      "Architecture planning for quantum and classical workflows",
-      "Prototype development and controlled implementation support",
-      "System integration with existing applications and cloud environments",
-      "Testing, validation, and technical review",
+      "AI opportunity assessment and data readiness review",
+      "Machine learning model design, training, and evaluation",
+      "Hybrid classical and quantum AI pipeline exploration",
+      "Integration of AI capabilities into existing applications",
+      "Delivery of AI Solutions for business and technical requirements",
+    ],
+    outcomes: [
+      "AI roadmap",
+      "Model prototypes",
+      "Pipeline design",
+      "Deployment support",
+    ],
+    workingModel: ["Assess", "Design", "Develop", "Deploy"],
+    solutions: ["AI Solutions"],
+  },
+  {
+    id: "quantum-software-development",
+    number: "03",
+    eyebrow: "Software layer",
+    title: "Quantum Software Development",
+    shortName: "Software",
+    icon: Code2,
+    summary:
+      "Quantum Software Development delivers quantum algorithms, applications, and tooling that connect with classical software systems.",
+    longCopy:
+      "This service turns selected opportunities into working software. Quinfosys engineers design quantum algorithms and circuits, build hybrid quantum and classical applications, integrate them with existing systems, and validate outputs through simulation and testing before controlled operational use.",
+    engagementFocus: [
+      "Quantum algorithm and circuit design",
+      "Hybrid quantum and classical application development",
+      "System integration with existing applications and platforms",
+      "Testing, simulation, and technical validation",
       "Documentation and handover for internal technical teams",
     ],
     outcomes: [
+      "Algorithm design",
       "Prototype build",
-      "Integration plan",
       "Validation report",
       "Technical handover",
     ],
     workingModel: ["Design", "Build", "Validate", "Handover"],
   },
   {
-    id: "support",
-    number: "03",
-    eyebrow: "Operations layer",
-    title: "Support and Maintenance",
-    shortName: "Support",
-    icon: Headphones,
+    id: "quantum-hardware-development",
+    number: "04",
+    eyebrow: "Hardware layer",
+    title: "Quantum Hardware Development",
+    shortName: "Hardware",
+    icon: Cpu,
     summary:
-      "Support and Maintenance keeps quantum related systems stable, reviewed, and ready for improvement after the first deployment or pilot stage.",
+      "Quantum Hardware Development supports the design and engineering of quantum devices, photonic systems, and the control layers around them.",
     longCopy:
-      "This service is built for teams that need continued operational confidence after implementation. Quinfosys supports monitoring direction, performance review, issue investigation, update planning, and improvement cycles so quantum enabled systems can mature without becoming isolated experimental assets. The service helps clients protect continuity while refining technical and business value over time.",
+      "This service addresses the physical side of quantum technology. Quinfosys works on device concepts, photonic building blocks, control electronics, and measurement setups, giving research and engineering teams a structured path from hardware concept to tested prototype.",
     engagementFocus: [
-      "Operational review for quantum related workflows",
-      "Maintenance planning for systems, documentation, and integrations",
-      "Performance review and improvement recommendations",
-      "Issue triage and technical support direction",
-      "Ongoing alignment with roadmap goals and adoption milestones",
+      "Quantum device and photonic system design",
+      "Control and measurement layer engineering",
+      "Prototype fabrication planning and test setups",
+      "Characterization and performance validation",
+      "Hardware and software integration support",
     ],
     outcomes: [
-      "System review",
-      "Maintenance plan",
-      "Performance notes",
-      "Improvement backlog",
+      "Device concepts",
+      "Prototype plans",
+      "Test results",
+      "Engineering reports",
     ],
-    workingModel: ["Monitor", "Review", "Improve", "Stabilize"],
+    workingModel: ["Concept", "Design", "Prototype", "Test"],
   },
   {
-    id: "training",
-    number: "04",
+    id: "quantum-network-development",
+    number: "05",
+    eyebrow: "Network layer",
+    title: "Quantum Network Development",
+    shortName: "Networks",
+    icon: Network,
+    summary:
+      "Quantum Network Development designs and builds the connectivity layer for secure, distributed quantum communication.",
+    longCopy:
+      "This service helps organizations plan and develop quantum networks. Quinfosys covers network architecture, protocol design, simulation and modelling of quantum links, and integration with existing classical network infrastructure for telecom, research, and enterprise teams.",
+    engagementFocus: [
+      "Quantum network architecture and protocol design",
+      "Simulation and modelling of quantum links and nodes",
+      "Secure node to node communication patterns",
+      "Integration with classical network infrastructure",
+      "Infrastructure planning for distributed quantum systems",
+    ],
+    outcomes: [
+      "Network architecture",
+      "Protocol design",
+      "Simulation results",
+      "Integration plan",
+    ],
+    workingModel: ["Model", "Design", "Simulate", "Integrate"],
+  },
+  {
+    id: "quantum-security-services",
+    number: "06",
+    eyebrow: "Trust layer",
+    title: "Quantum Security Services",
+    shortName: "Security",
+    icon: ShieldCheck,
+    summary:
+      "Quantum Security Services prepares organizations for quantum era risk through post quantum readiness, secure communication planning, and cryptographic transition support.",
+    longCopy:
+      "This service addresses the security transition created by quantum computing. Quinfosys reviews cryptographic exposure, plans migration to quantum resistant approaches, and supports crypto agility so sensitive systems can adapt as standards and threats evolve.",
+    engagementFocus: [
+      "Quantum risk review for sensitive data and communication paths",
+      "Post quantum encryption readiness and migration planning",
+      "Crypto agility architecture for infrastructure and applications",
+      "Secure key distribution concept alignment",
+      "Governance support for long term cryptographic transition",
+    ],
+    outcomes: [
+      "Risk review",
+      "Migration plan",
+      "Security architecture",
+      "Transition roadmap",
+    ],
+    workingModel: ["Review", "Harden", "Transition", "Monitor"],
+    solutions: ["Crypto-Agility"],
+  },
+  {
+    id: "quantum-rd-services",
+    number: "07",
+    eyebrow: "Research layer",
+    title: "Quantum R&D Services",
+    shortName: "R&D Services",
+    icon: FlaskConical,
+    summary:
+      "Quantum R&D Services provides research and engineering capacity for organizations exploring applied quantum technology problems.",
+    longCopy:
+      "This service lets organizations work with Quinfosys research teams on defined technical questions. Engagements cover feasibility studies, algorithm and simulation research, prototype development, and structured reporting so results can move toward publications, patents, or product directions.",
+    engagementFocus: [
+      "Feasibility studies for applied quantum use cases",
+      "Algorithm, simulation, and modelling research",
+      "Prototype development and experimental validation",
+      "Collaboration with academic and industry partners",
+      "Structured technical reporting of research outcomes",
+    ],
+    outcomes: [
+      "Feasibility study",
+      "Research prototype",
+      "Technical report",
+      "Research roadmap",
+    ],
+    workingModel: ["Question", "Experiment", "Validate", "Report"],
+  },
+  {
+    id: "training-certification",
+    number: "08",
     eyebrow: "Enablement layer",
-    title: "Quantum Training and Support",
+    title: "Training & Certification",
     shortName: "Training",
     icon: GraduationCap,
     summary:
-      "Quantum Training and Support prepares leadership, developers, and domain teams to understand quantum technologies with the right level of depth for their role.",
+      "Training & Certification prepares leadership, developers, and domain teams to understand and work with quantum technologies at the right depth for their role.",
     longCopy:
-      "This service focuses on capability building rather than generic awareness. Quinfosys can structure learning paths for executives, technical teams, students, and business units so each group understands the concepts, limits, tools, and implementation direction relevant to them. The goal is to help organizations build internal confidence before scaling quantum initiatives.",
+      "This service focuses on capability building. Quinfosys structures learning paths for executives, technical teams, students, and business units, covering concepts, tools, and implementation direction, with certification to recognise completed learning.",
     engagementFocus: [
       "Foundational quantum computing orientation for teams",
       "Developer enablement for quantum programming and workflow concepts",
       "Leadership sessions focused on adoption, risk, and opportunity",
       "Role based learning paths for technical and non technical groups",
-      "Support material for continued learning and internal knowledge transfer",
+      "Certification for completed programs and assessments",
     ],
     outcomes: [
       "Training sessions",
       "Learning pathway",
-      "Team enablement",
+      "Certification",
       "Support material",
     ],
-    workingModel: ["Orient", "Teach", "Practice", "Enable"],
+    workingModel: ["Orient", "Teach", "Practice", "Certify"],
   },
 ];
 
 const serviceMarkers = [
   { label: "Consult", text: "Clarify the opportunity and direction" },
-  { label: "Build", text: "Turn selected work into practical systems" },
-  { label: "Operate", text: "Keep systems stable and improving" },
-  { label: "Enable", text: "Prepare teams to use the capability" },
+  { label: "Develop", text: "Build software, hardware, and networks" },
+  { label: "Secure", text: "Prepare systems for quantum era risk" },
+  { label: "Enable", text: "Train and certify teams to use the capability" },
 ];
 
 function ServicesHeroInfographic() {
   const steps = [
     { icon: ClipboardCheck, label: "Consult", text: "Set the direction" },
-    { icon: Rocket, label: "Build", text: "Create the system" },
-    { icon: Headphones, label: "Support", text: "Keep it reliable" },
+    { icon: Code2, label: "Develop", text: "Create the system" },
+    { icon: ShieldCheck, label: "Secure", text: "Keep it future ready" },
     { icon: GraduationCap, label: "Enable", text: "Train the team" },
   ];
 
@@ -165,7 +276,7 @@ function ServicesHeroInfographic() {
                 Service system
               </p>
               <h2 className="mt-2 text-2xl font-medium tracking-[-0.04em] text-[#f8f8f8] sm:text-3xl">
-                Consult. Build. Support.
+                Consult. Develop. Enable.
               </h2>
             </div>
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f8f8f8] text-[#111111] shadow-2xl">
@@ -365,6 +476,23 @@ function ServiceBlock({
                   </span>
                 ))}
               </div>
+              {service.solutions && (
+                <>
+                  <p className="mb-4 mt-6 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500">
+                    Solutions
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {service.solutions.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-white/15 bg-white/[0.09] px-3 py-2 text-xs text-zinc-100"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
 
             <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.045] p-6 text-[#f8f8f8]">
@@ -427,8 +555,9 @@ export default function ServicesPage() {
               Practical Quantum Services for teams moving from idea to execution.
             </h1>
             <p className="mt-8 max-w-3xl text-[1.02rem] font-light leading-8 text-slate-300 sm:text-lg sm:leading-9">
-              Quinfosys services connect advisory, implementation, operational
-              support, and training into one delivery model for organizations
+              Quinfosys services connect consulting, AI, software, hardware,
+              network, security, and research development with training and
+              certification into one delivery model for organizations
               preparing to adopt quantum technologies with structure and care.
             </p>
           </div>
@@ -443,7 +572,7 @@ export default function ServicesPage() {
               Service pathway
             </p>
             <h2 className="mt-2 text-2xl font-medium tracking-[-0.035em] sm:text-3xl">
-              Move from strategy to delivery without losing continuity.
+              Move from consulting to development and enablement without losing continuity.
             </h2>
           </div>
           <div className="grid gap-3 sm:grid-cols-4 lg:min-w-[40rem]">

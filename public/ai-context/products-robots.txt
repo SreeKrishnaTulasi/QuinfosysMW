@@ -1,41 +1,37 @@
 # Quinfosys Products Page AI Context / Robots Note
 
 Page: /products
-Purpose: The Products page presents the Quinfosys product stack as three connected quantum technology layers. It should explain the products clearly while matching the homepage redesign language and avoiding heavy legacy website content.
+Purpose: Named Quinfosys products, platforms, and software systems (what Quinfosys builds).
 
 Design rules:
-- Keep the dark quantum-gradient page language used in the current ProductsPage.
-- Keep the alternating expandable product blocks.
-- Keep the product visual cards abstract and lightweight; do not add heavy product imagery.
-- Keep interactions simple: one expandable product block at a time, Read more / Show less, and scroll-to-top after deeper scrolling.
-- Keep typography, spacing, rounded panels, and CTA styling consistent with the homepage and Solutions page.
+- Keep the existing dark quantum-gradient page language, rounded panels, and CTA styling.
+- Keep expandable blocks closed by default, one open at a time, with Read more / Show less.
 - Use SVG/CSS/Tailwind motion only. Do not add new animation libraries.
 - Respect reduced-motion browser preferences through the global CSS rule.
 
-Product section map:
-1. Hero: Three quantum products. One connected stack.
-2. Product pathway strip: Language, Cloud, Web.
-3. Product block 01: Quantum Computing Programming Language / QuCPL.
-4. Product block 02: Quantum Cloud Services / QCS.
-5. Product block 03: Quantum Web Services / QWS.
-6. CTA: product demo, technical walkthrough, or discussion.
+Product section map (in order):
+1. QuCPL: Quantum Computing Programming Language. Portal: https://qucpl.quinfosys.com
+2. QWS: Quantum Web Services. Portal: https://qws.quinfosys.com
+3. QCS: Quantum Computing Services. Portal: https://qcs.quinfosys.com
+4. QNS: Quantum Network Simulator. Portal: https://qns.quinfosys.com
+5. QisCode: Quantum IDE. Portal: https://qiscode.quinfosys.com
+6. QSEO: Quantum Search Engine Optimization. Portal: https://qseo.quinfosys.com
 
-Product positioning:
-- QuCPL is the language layer for quantum algorithm and circuit development.
-- QCS is the cloud execution layer for scalable quantum and hybrid workloads.
-- QWS is the web integration layer for exposing quantum capabilities through APIs and software systems.
+Naming rules:
+- QCS means Quantum Computing Services. It must not be positioned or named as Quantum Cloud Computing.
+- QNS is the Quantum Network Simulator.
 
 Content rules:
-- Explain products as practical technology layers, not as exaggerated claims.
+- Explain products as practical technology layers, not exaggerated claims.
 - Avoid unsupported performance promises.
-- Keep product details expandable so the first viewport remains clean.
-- Use consistent labels: Language layer, Execution layer, Integration layer.
 
 Canonical internal routes:
 /
 /products
-/solutions
+/technologies
+/industries
 /services
-/research-development
+/research
 /resources
 /company
+(/solutions and /research-development redirect to /industries and /research.)

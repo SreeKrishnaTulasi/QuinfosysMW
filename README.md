@@ -24,5 +24,5 @@ GitHub Actions FTP deployment is included at `.github/workflows/deploy-ftp.yml`.
 - Homepage keeps the provided sticky black/white animation structure.
 - Navbar is white because the Quinfosys logo text is black.
 - There are no navbar dropdowns.
-- Products, Solutions, and Services use in-page accordions for future expansion.
+- Products, Technologies, Industries, Services, Research, and Resources follow the Quinfosys Website Navigation specification. Solutions are shown inside the relevant Industry, Technology, or Service pages, not as a primary navigation item.
 - The footer is concise and white.

@@ -1,37 +1,37 @@
 # Quinfosys Homepage AI Context / Robots Note
 
 Page: /
-Purpose: The homepage is a concise gateway into Quinfosys products, solutions, services, research & development, and resources. It should not dump all legacy website text. It should open doors into subpages where detailed expandable sections live.
+Purpose: The homepage is a concise gateway into Quinfosys products, technologies, industries, services, research, and resources. It opens doors into subpages where detailed expandable sections live.
+
+Navigation (source of truth: Quinfosys Website Navigation specification):
+Products | Technologies | Industries | Services | Research | Resources | Company
+The Quinfosys logo links to https://quinfosys.com. There is no separate Home item.
+Solutions is not a primary navigation category. Solutions appear inside the relevant Industry, Technology, or Service context.
 
 Design rules:
 - Keep the black/white sticky-screen redesign language.
 - Keep the animated quantum wave aligned to the hero heading area.
-- Keep the navbar white because the logo text is black.
-- Keep navbar links direct. Do not use navbar dropdowns.
-- Keep Technologies nested under Research & Development.
+- Keep the navbar white because the logo text is black. Do not use navbar dropdowns.
 - Keep the footer white and concise.
-- Keep homepage content brief; use page-level accordions for deeper content.
 
 Homepage section map:
-1. Hero: Entangle with Quantum, animated wave, product/solution CTAs.
-2. Quantum Product Portfolio: QuCPL, QCS Cloud, QWS APIs.
-3. Quantum Solutions Portfolio: enterprise strategy, optimization, analytics, security, cloud migration, innovation framework.
-4. Services: consulting, implementation, support, training.
-5. Research & Development: research areas, technologies, projects, collaborations.
-6. Resources: QisCode, documentation, white papers, case studies.
-7. Concise CTA/footer.
+1. Hero: Entangle with Quantum, animated wave, explore CTA.
+2. Quantum Product Portfolio: QuCPL, QWS, QCS, QNS, QisCode, QSEO.
+3. Quantum Technologies Portfolio: Quantum Computing, Quantum Networks, Quantum Security (full list on /technologies).
+4. Website gateways: Industries, Services, Research, Resources.
+5. Concise CTA/footer.
 
 Performance rules:
-- No heavy images added to the homepage.
-- No video backgrounds.
-- No new animation libraries.
-- SVG/CSS animation only.
-- Motion is reduced when the browser requests reduced motion.
+- No heavy images, no video backgrounds, no new animation libraries.
+- SVG/CSS animation only. Motion is reduced when the browser requests reduced motion.
 
 Canonical internal routes:
+/
 /products
-/solutions
+/technologies
+/industries
 /services
-/research-development
+/research
 /resources
 /company
+(/solutions and /research-development redirect to /industries and /research.)

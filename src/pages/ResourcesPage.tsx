@@ -1,9 +1,11 @@
 import {
   ArrowUp,
   BookOpen,
+  Briefcase,
   Calendar,
   Check,
   ChevronDown,
+  Code2,
   Download,
   FileText,
   GraduationCap,
@@ -11,7 +13,10 @@ import {
   LibraryBig,
   Mail,
   Newspaper,
+  PenLine,
   Sparkles,
+  Terminal,
+  Video,
   type LucideIcon,
 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -42,48 +47,168 @@ type ResourceFormat = {
 
 const resourceSections: ResourceSection[] = [
   {
-    id: "docs",
+    id: "documentation",
     number: "01",
     eyebrow: "Knowledge base",
-    title: "Docs",
-    shortName: "Docs",
+    title: "Documentation",
+    shortName: "Documentation",
     icon: BookOpen,
     summary:
-      "Docs organizes product references, onboarding guides, technical explanations, and developer material in a clean content first structure.",
+      "Documentation organizes product references, onboarding guides, and technical explanations in a clean content first structure.",
     longCopy:
-      "This area is designed for practical reading. It can hold user guides, developer notes, API references, configuration explanations, onboarding pages, release notes, and implementation walkthroughs. The goal is to make the site useful for people who need clarity after they understand the company direction.",
-    formats: ["User guides", "Developer notes", "API references", "Release notes"],
+      "This area is designed for practical reading. It holds user guides, configuration explanations, onboarding pages, release notes, and implementation walkthroughs for Quinfosys products and technologies, written so both technical and business readers can follow them.",
+    formats: ["User guides", "Onboarding guides", "Release notes", "Configuration notes"],
     audience: [
-      "Developers who need implementation guidance",
-      "Business teams who need plain technical explanations",
+      "Teams who need clear product guidance",
+      "Business readers who need plain technical explanations",
       "Partners reviewing product and service details",
       "Internal teams maintaining consistent public information",
     ],
     readingPath: ["Locate", "Read", "Apply", "Return"],
   },
   {
-    id: "papers",
+    id: "developer-resources",
     number: "02",
-    eyebrow: "Long form insight",
-    title: "Papers",
-    shortName: "Papers",
+    eyebrow: "Build material",
+    title: "Developer Resources",
+    shortName: "Developer Resources",
+    icon: Code2,
+    summary:
+      "Developer Resources gathers the tools, guides, and examples developers need to start building with Quinfosys products.",
+    longCopy:
+      "This section is for people writing quantum and hybrid software. It brings together quick start guides, code examples, SDK and tooling notes, and learning material for QuCPL, QisCode, QCS, QWS, and related products.",
+    formats: ["Quick start guides", "Code examples", "SDK and tooling notes", "Learning material"],
+    audience: [
+      "Developers building quantum and hybrid applications",
+      "Students learning quantum programming",
+      "Research teams prototyping algorithms",
+      "Partners integrating Quinfosys products",
+    ],
+    readingPath: ["Set up", "Build", "Test", "Ship"],
+  },
+  {
+    id: "api-documentation",
+    number: "03",
+    eyebrow: "Reference",
+    title: "API Documentation",
+    shortName: "API Documentation",
+    icon: Terminal,
+    summary:
+      "API Documentation provides the reference for connecting to Quinfosys services through APIs and service endpoints.",
+    longCopy:
+      "This section documents endpoints, request and response formats, authentication, and usage notes for Quinfosys services such as Quantum Web Services and Quantum Computing Services, so application teams can integrate quantum capability into existing systems.",
+    formats: ["Endpoint reference", "Request and response formats", "Authentication notes", "Usage examples"],
+    audience: [
+      "Application developers integrating quantum services",
+      "Enterprise engineering teams",
+      "Platform teams evaluating integration effort",
+      "Partners building on Quinfosys services",
+    ],
+    readingPath: ["Authenticate", "Call", "Handle results", "Monitor"],
+  },
+  {
+    id: "technical-papers",
+    number: "04",
+    eyebrow: "Technical depth",
+    title: "Technical Papers",
+    shortName: "Technical Papers",
     icon: FileText,
     summary:
-      "Papers provide deeper technical and strategic writing for quantum adoption, architecture planning, and future business readiness.",
+      "Technical Papers provide deeper technical writing on quantum architecture, methods, and implementation direction.",
     longCopy:
-      "This section should feel more formal than documentation. It can support technical papers, industry explainers, architecture notes, adoption frameworks, security perspectives, quantum readiness material, and strategic briefings. The writing can be longer, more analytical, and more useful for leaders or institutional readers.",
-    formats: ["Technical papers", "Strategy briefs", "Architecture notes", "Readiness guides"],
+      "This section is more formal than documentation. It supports technical papers, architecture notes, and implementation studies that explain how Quinfosys systems and methods work and why design decisions were made.",
+    formats: ["Technical papers", "Architecture notes", "Implementation studies", "Method descriptions"],
+    audience: [
+      "Researchers reviewing technical direction",
+      "Engineers evaluating architecture choices",
+      "Institutions comparing capability",
+      "Technical decision makers",
+    ],
+    readingPath: ["Frame", "Analyze", "Evaluate", "Apply"],
+  },
+  {
+    id: "whitepapers",
+    number: "05",
+    eyebrow: "Long form insight",
+    title: "Whitepapers",
+    shortName: "Whitepapers",
+    icon: LibraryBig,
+    summary:
+      "Whitepapers offer strategic, long form perspectives on quantum adoption, industry applications, and readiness.",
+    longCopy:
+      "This section collects whitepapers written for decision makers. Topics include quantum readiness, industry use cases, security transition planning, and adoption frameworks, presented in a form that supports planning and investment discussions.",
+    formats: ["Strategy briefs", "Readiness guides", "Industry perspectives", "Adoption frameworks"],
     audience: [
       "Decision makers studying quantum readiness",
-      "Researchers reviewing technical direction",
       "Enterprises planning long term technology adoption",
-      "Institutions comparing capability and thought leadership",
+      "Industry teams exploring sector use cases",
+      "Investors and partners reviewing direction",
     ],
     readingPath: ["Frame", "Analyze", "Evaluate", "Decide"],
   },
   {
+    id: "blog",
+    number: "06",
+    eyebrow: "Perspectives",
+    title: "Blog",
+    shortName: "Blog",
+    icon: PenLine,
+    summary:
+      "The Blog shares articles, explainers, and commentary from the Quinfosys team on quantum technology and its applications.",
+    longCopy:
+      "This section is the place for shorter, more regular writing. It covers explainers, product updates, technology commentary, and lessons from the field in a readable, accessible tone.",
+    formats: ["Explainers", "Product updates", "Technology commentary", "Team perspectives"],
+    audience: [
+      "Readers new to quantum technology",
+      "Customers following product progress",
+      "Developers and researchers",
+      "The wider quantum community",
+    ],
+    readingPath: ["Discover", "Read", "Share", "Return"],
+  },
+  {
+    id: "news",
+    number: "07",
+    eyebrow: "Announcements",
+    title: "News",
+    shortName: "News",
+    icon: Newspaper,
+    summary:
+      "News brings together company announcements, partnerships, milestones, and press updates from Quinfosys.",
+    longCopy:
+      "This section records what is happening at Quinfosys, including partnership announcements, agreements with institutions, product milestones, and coverage of company activity, so visitors can follow progress over time.",
+    formats: ["Company announcements", "Partnership updates", "Product milestones", "Press releases"],
+    audience: [
+      "Customers and partners following progress",
+      "Institutions and government stakeholders",
+      "Investors and analysts",
+      "Media and the wider community",
+    ],
+    readingPath: ["Announce", "Read", "Follow", "Share"],
+  },
+  {
+    id: "media",
+    number: "08",
+    eyebrow: "Press & visuals",
+    title: "Media",
+    shortName: "Media",
+    icon: Video,
+    summary:
+      "Media provides press material, brand assets, images, and videos about Quinfosys for journalists, partners, and the community.",
+    longCopy:
+      "This section gives media and partners a single place to find approved visuals and background information, including brand assets, product images, event photos, and recorded sessions.",
+    formats: ["Press kit", "Brand assets", "Images and photos", "Videos and recordings"],
+    audience: [
+      "Journalists and media teams",
+      "Event organizers and partners",
+      "Community and educators",
+      "Internal and partner marketing teams",
+    ],
+    readingPath: ["Find", "Review", "Use", "Credit"],
+  },
+  {
     id: "events",
-    number: "03",
+    number: "09",
     eyebrow: "Community & sessions",
     title: "Events",
     shortName: "Events",
@@ -91,12 +216,54 @@ const resourceSections: ResourceSection[] = [
     summary:
       "Events brings together upcoming and completed Quinfosys sessions, conclaves, and community gatherings in one place.",
     longCopy:
-      "This section tracks Quinfosys events as they are announced and as they wrap up. Upcoming sessions are listed here first, and the completed list grows as events take place, giving visitors a simple way to follow what is coming next and what has already happened.",
+      "This section tracks Quinfosys events as they are announced and as they wrap up. Upcoming sessions are listed here first, and the completed list grows as events take place, giving visitors a simple record of Quinfosys community activity.",
     formats: ["Conclave", "Meetups", "Seminars", "Workshops", "Summit"],
-    audience: ["Quinfosys Quantum Industry Conclave 2027 \u2014 August 20, 2027"],
+    audience: [
+      "Quinfosys Quantum Industry Conclave 2027 — August 20, 2027",
+    ],
     audienceLabel: "Upcoming",
     readingPath: [],
     pathLabel: "Completed",
+  },
+  {
+    id: "case-studies",
+    number: "10",
+    eyebrow: "Applied outcomes",
+    title: "Case Studies",
+    shortName: "Case Studies",
+    icon: Briefcase,
+    summary:
+      "Case Studies explain how Quinfosys technologies and solutions address real business and technical problems.",
+    longCopy:
+      "This section presents application focused stories that describe context, approach, and outcomes. Case studies connect products, technologies, and solutions to the industries and customers they serve.",
+    formats: ["Industry case studies", "Solution walkthroughs", "Pilot summaries", "Outcome reports"],
+    audience: [
+      "Industry teams evaluating applications",
+      "Customers comparing approaches",
+      "Partners seeking reference examples",
+      "Decision makers reviewing outcomes",
+    ],
+    readingPath: ["Context", "Approach", "Result", "Learn"],
+  },
+  {
+    id: "downloads",
+    number: "11",
+    eyebrow: "Files & assets",
+    title: "Downloads",
+    shortName: "Downloads",
+    icon: Download,
+    summary:
+      "Downloads offers brochures, datasheets, documents, and other files related to Quinfosys products and services.",
+    longCopy:
+      "This section collects downloadable material in one place, including product brochures, datasheets, whitepaper PDFs, and presentation material that visitors can keep and share.",
+    formats: ["Brochures", "Datasheets", "PDF documents", "Presentations"],
+    audience: [
+      "Customers reviewing offerings offline",
+      "Partners sharing material internally",
+      "Researchers collecting references",
+      "Investors and institutions",
+    ],
+    readingPath: ["Browse", "Download", "Review", "Share"],
   },
 ];
 
@@ -142,14 +309,14 @@ const resourceNotes = [
   },
   {
     label: "Future ready",
-    text: "The structure can grow into guides, papers, documentation, and events.",
+    text: "The structure can grow into documentation, papers, case studies, downloads, and events.",
   },
 ];
 
 function ResourcesHeroVisual() {
   const shelves = [
-    { label: "Docs", icon: BookOpen, text: "Guides, references, and onboarding" },
-    { label: "Papers", icon: FileText, text: "Strategic and technical depth" },
+    { label: "Documentation", icon: BookOpen, text: "Guides, references, and onboarding" },
+    { label: "Technical Papers", icon: FileText, text: "Strategic and technical depth" },
     { label: "Events", icon: Calendar, text: "Upcoming and completed sessions" },
   ];
 
@@ -311,10 +478,10 @@ export default function ResourcesPage() {
               Resources
             </div>
             <h1 className="mt-9 max-w-3xl text-4xl font-medium leading-[1.05] tracking-[-0.06em] text-[#f8f8f8] sm:text-5xl lg:text-7xl">
-              A reading center for docs, papers, and events.
+              A reading center for documentation, papers, news, and events.
             </h1>
             <p className="mt-8 max-w-2xl text-base font-light leading-8 text-slate-300 sm:text-lg">
-              Resources gives Quinfosys a content oriented space for practical learning, technical references, papers, and upcoming or completed events.
+              Resources gives Quinfosys a content oriented space for documentation, developer resources, technical papers, whitepapers, blog, news, media, events, case studies, and downloads.
             </p>
             <div className="mt-9 grid gap-3 sm:grid-cols-3">
               {resourceNotes.map((note) => (

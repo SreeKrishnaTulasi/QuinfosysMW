@@ -28,10 +28,12 @@ type TechnologySection = {
   applications: string[];
   path: string[];
   href: string;
+  solutions?: string[];
 };
 
 const technologies: TechnologySection[] = [
   {
+    solutions: ["Quantum Risk Engine"],
     id: "quantum-computing",
     number: "01",
     eyebrow: "Core layer",
@@ -86,6 +88,7 @@ const technologies: TechnologySection[] = [
     path: ["Research", "Design", "Simulate", "Validate"],
   },
   {
+    solutions: ["Quantum Risk Engine", "AI Solutions"],
     id: "quantum-ai",
     number: "03",
     eyebrow: "Intelligence layer",
@@ -113,6 +116,7 @@ const technologies: TechnologySection[] = [
     path: ["Research", "Model", "Train", "Evaluate"],
   },
   {
+    solutions: ["Crypto-Agility"],
     id: "quantum-security",
     number: "04",
     eyebrow: "Trust layer",
@@ -418,6 +422,23 @@ function TechnologyBlock({
                   </span>
                 ))}
               </div>
+              {technology.solutions && (
+                <>
+                  <p className="mb-4 mt-6 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500">
+                    Solutions
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {technology.solutions.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-white/15 bg-white/[0.09] px-3 py-2 text-xs text-zinc-100"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
 
             <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.045] p-6 text-[#f8f8f8]">

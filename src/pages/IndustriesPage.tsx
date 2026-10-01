@@ -31,10 +31,12 @@ type IndustrySection = {
   businessUse: string[];
   deliveryPath: string[];
   href: string;
+  solutions?: string[];
 };
 
 const industries: IndustrySection[] = [
   {
+    solutions: ["Quantum Risk Engine"],
     id: "fintech",
     number: "01",
     eyebrow: "Financial layer",
@@ -147,6 +149,7 @@ const industries: IndustrySection[] = [
     deliveryPath: ["Model", "Simulate", "Predict", "Validate"],
   },
   {
+    solutions: ["Wise Supply Chain Solutions"],
     id: "supply-chain",
     number: "05",
     eyebrow: "Logistics layer",
@@ -489,6 +492,23 @@ function IndustryBlock({
                   </span>
                 ))}
               </div>
+              {industry.solutions && (
+                <>
+                  <p className="mb-4 mt-6 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500">
+                    Solutions
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {industry.solutions.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-white/15 bg-white/[0.09] px-3 py-2 text-xs text-zinc-100"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
 
             <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.045] p-6 text-[#f8f8f8]">

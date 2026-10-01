@@ -1,0 +1,36 @@
+# Quinfosys Technologies Page AI Context / Robots Note
+
+Page: /technologies
+Purpose: Core technology domains developed by Quinfosys (what Quinfosys develops). Technologies are foundational scientific and engineering domains and may support multiple industries and solutions.
+
+Design rules:
+- Keep the existing dark quantum-gradient page language, rounded panels, and CTA styling.
+- Keep expandable blocks closed by default, one open at a time, with Read more / Show less.
+- Use SVG/CSS/Tailwind motion only. Do not add new animation libraries.
+- Respect reduced-motion browser preferences through the global CSS rule.
+
+Technology section map (in order):
+1. Quantum Computing. Portal: https://qc.quinfosys.com
+2. Quantum Networks. Portal: https://network.quinfosys.com
+3. Quantum AI. Portal: https://ai.quinfosys.com
+4. Quantum Security. Portal: https://security.quinfosys.com
+5. Quantum Sensing. Portal: https://sensing.quinfosys.com
+
+Naming rules:
+- Use the domain form: Quantum Computing (not Quantum Computer), Quantum Sensing (not Quantum Sensors).
+
+Solutions shown inside Technologies:
+- Quantum Risk Engine (Quantum Computing / Quantum AI)
+- Crypto-Agility (Quantum Security)
+- AI Solutions (Quantum AI)
+
+Canonical internal routes:
+/
+/products
+/technologies
+/industries
+/services
+/research
+/resources
+/company
+(/solutions and /research-development redirect to /industries and /research.)

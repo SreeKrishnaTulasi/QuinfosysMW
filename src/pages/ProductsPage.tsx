@@ -228,7 +228,7 @@ const products: ProductSection[] = [
 
 const stackMarkers = [
   { label: "Language", text: "Design quantum logic" },
-  { label: "Cloud", text: "Run managed workloads" },
+  { label: "Compute", text: "Run managed workloads" },
   { label: "Web", text: "Connect with applications" },
 ];
 
@@ -236,7 +236,7 @@ const stackMarkers = [
 function ProductHeroInfographic() {
   const layers = [
     { icon: Code2, label: "QuCPL", text: "Language layer" },
-    { icon: Cloud, label: "QCS", text: "Cloud execution" },
+    { icon: Cloud, label: "QCS", text: "Computing services" },
     { icon: Globe, label: "QWS", text: "Web integration" },
   ];
 
@@ -293,7 +293,7 @@ function ProductHeroInfographic() {
           </div>
 
           <div className="mt-5 grid grid-cols-3 gap-2 text-center">
-            {['SDK', 'Cloud', 'API'].map((item) => (
+            {["SDK", "Compute", "API"].map((item) => (
               <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.04] px-3 py-3">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">
                   {item}
@@ -537,7 +537,7 @@ export default function ProductsPage() {
             </h1>
             <p className="mt-8 max-w-3xl text-[1.02rem] font-light leading-8 text-slate-300 sm:text-lg sm:leading-9">
               Quinfosys products are structured as a connected quantum stack: a
-              development language, a cloud execution layer, and a web services
+              development language, a computing services layer, and a web services
               layer for bringing quantum capability into practical software
               systems.
             </p>

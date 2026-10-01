@@ -7,29 +7,31 @@ Brand: Quinfosys
 Tagline: Entangle with Quantum
 
 Purpose:
-The Resources page is the public knowledge center for Quinfosys. It is designed as a content oriented page rather than a commercial offering page. It organizes QisCode material, documentation, white papers, case studies, and future downloadable knowledge assets.
+Technical knowledge, documentation, publications, media, and other information resources (what Quinfosys publishes and provides). Resources portal: https://quinfosys.com/resources. The page is a content library, not a product catalogue.
 
-Design Direction:
-The page uses the homepage inspired blue and dark blue shaded gray visual language. It is editorial, clean, and spacious rather than gradient heavy. It uses resource format cards and smooth expandable resource sections.
-
-Primary Sections:
-1. QisCode
-Central learning and technical reference layer for quantum design, simulation, transpilation, and execution workflows.
-
-2. Documentation
-Guides, API references, user material, developer notes, onboarding pages, implementation explanations, and release notes.
-
-3. White Papers
-Long form technical and strategic writing for quantum adoption, architecture planning, readiness, and future business direction.
-
-4. Case Studies
-Future use case stories, implementation examples, pilot summaries, and outcome based learning material.
+Resource sections (in order):
+1. Documentation
+2. Developer Resources
+3. API Documentation
+4. Technical Papers
+5. Whitepapers
+6. Blog
+7. News
+8. Media
+9. Events
+10. Case Studies
+11. Downloads
 
 Interaction Model:
-Each resource area starts closed by default. Visitors can open sections to read deeper context, audience information, content formats, and a guided reading path. The expandable logic should remain smooth and consistent with the other redesigned pages.
+Each resource area starts closed by default and expands smoothly to show context, audience, formats, and a reading path.
 
-Responsive Behavior:
-The page is built mobile first. Hero content, cards, expandable panels, and CTA elements stack on phones, expand on tablets, and use wider multi column layouts on desktop and large screens.
-
-SEO and AI Reading Notes:
-Resources should be interpreted as a public content library and educational knowledge hub for Quinfosys. It should not be treated as a product catalogue. It supports learning, documentation, technical explanation, research communication, and future content downloads.
+Canonical internal routes:
+/
+/products
+/technologies
+/industries
+/services
+/research
+/resources
+/company
+(/solutions and /research-development redirect to /industries and /research.)

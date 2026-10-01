@@ -1,0 +1,31 @@
+# Quinfosys Research Page Context
+
+Page: Research
+Route: /research
+Purpose: Scientific research, engineering R&D, and research outputs (what Quinfosys investigates). Research portal: https://quinfosys.com/research
+
+The Research page is a content oriented knowledge library, not a sales catalogue. Technologies are a separate primary page (/technologies) and are not nested inside Research.
+
+Main sections (in order):
+1. Research Areas
+2. Research Programs
+3. Publications
+4. Research Papers
+5. Patents
+6. Technical Reports
+7. Research Collaborations
+
+Key behavior:
+All expandable research sections are closed by default.
+The page is responsive for mobile, tablet, desktop, and wide screens.
+
+Canonical internal routes:
+/
+/products
+/technologies
+/industries
+/services
+/research
+/resources
+/company
+(/solutions and /research-development redirect to /industries and /research.)

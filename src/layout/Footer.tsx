@@ -88,15 +88,15 @@ export default function Footer() {
     <footer className="relative border-t border-slate-200 bg-white px-6 py-12 text-slate-700">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.15fr_0.85fr]">
         <div className="max-w-2xl">
-          <Link to="/" aria-label="Go to Quinfosys homepage" className="inline-flex">
+          <a href="https://quinfosys.com" aria-label="Go to Quinfosys homepage" className="inline-flex">
             <img src={logo} alt="Quinfosys" className="h-10 w-auto" />
-          </Link>
+          </a>
 
           <p className="mt-5 text-sm font-semibold startcase tracking-[0.24em] text-[#111111]">
             {company.tagline}
           </p>
           <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600">
-            Enterprise quantum products, solutions, services, research, and resources for organizations preparing for the next era of computing.
+            Enterprise quantum products, technologies, industries, services, research, and resources for organizations preparing for the next era of computing.
           </p>
 
           <div className="mt-6 grid gap-3 text-sm text-slate-600 sm:grid-cols-2">

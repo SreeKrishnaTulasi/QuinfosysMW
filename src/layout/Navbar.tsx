@@ -1,15 +1,14 @@
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { company, navigation } from '../data/content';
 
 const contactHref = `mailto:${company.email}?subject=${encodeURIComponent('Quinfosys inquiry')}`;
 const contactNeutral = '#111111';
-const displayNavigation = navigation.map((item) =>
-  item.href === '/research-development' ? { ...item, label: 'Research' } : item
-);
-const mobileNavigation = [{ label: 'Home', href: '/' }, ...displayNavigation];
+const displayNavigation = navigation;
+const mobileNavigation = displayNavigation;
+const homeHref = 'https://quinfosys.com';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -44,14 +43,14 @@ export default function Navbar() {
     <>
       <nav className="fixed left-0 right-0 top-0 z-[90] border-b border-black/10 bg-white shadow-[0_1px_0_rgba(15,23,42,0.04)]">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-6">
-          <Link
-            to="/"
+          <a
+            href={homeHref}
             className="flex items-center gap-3"
             aria-label="Go to Quinfosys homepage"
             onClick={() => setMobileMenuOpen(false)}
           >
             <img src={logo} alt="Quinfosys" className="h-8 w-auto sm:h-9" />
-          </Link>
+          </a>
 
           <div className="hidden items-center gap-8 text-[13px] font-semibold tracking-wide text-zinc-500 lg:flex">
             {displayNavigation.map((item) => (

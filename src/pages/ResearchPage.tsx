@@ -1,19 +1,16 @@
 import {
   ArrowUp,
-  Bot,
+  Award,
+  BookOpen,
   BrainCircuit,
   Check,
   ChevronDown,
-  Cpu,
+  ClipboardList,
   FileText,
   FlaskConical,
-  Layers,
   Mail,
   Microscope,
   Network,
-  Radio,
-  Satellite,
-  ShieldCheck,
   Sparkles,
   Telescope,
   type LucideIcon,
@@ -35,13 +32,6 @@ type ResearchSection = {
   readingPath: string[];
 };
 
-type TechnologyItem = {
-  name: string;
-  description: string;
-  icon: LucideIcon;
-  signals: string[];
-};
-
 const researchSections: ResearchSection[] = [
   {
     id: "research-areas",
@@ -51,72 +41,135 @@ const researchSections: ResearchSection[] = [
     shortName: "Research areas",
     icon: Telescope,
     summary:
-      "Research Areas presents the technical directions Quinfosys studies across computing, communication, sensing, security, theory, and applied quantum systems.",
+      "Research Areas presents the scientific and engineering directions Quinfosys studies across quantum computing, networks, AI, security, sensing, and applied quantum systems.",
     longCopy:
-      "This section is designed as the technical map of the organization. It explains the themes that shape Quinfosys research thinking, from photonic quantum computing and quantum hardware to quantum algorithms, secure communication, networks, sensors, and theoretical foundations. The goal is to show the scientific surface area clearly while keeping each direction connected to future product, solution, and service capability.",
+      "This section is the technical map of the organization. It explains the themes that shape Quinfosys research, from photonic quantum computing and quantum hardware to algorithms, secure communication, sensing, and theory, and shows how each area connects to the Quinfosys technology domains.",
     focus: [
-      "Photonic quantum computing and architecture direction",
+      "Quantum computing, photonic architectures, and algorithms",
       "Quantum hardware, devices, and control concepts",
-      "Quantum communication, networks, and secure information transfer",
-      "Quantum sensors and measurement systems",
-      "Algorithms, theory, simulation, and applied quantum models",
+      "Quantum networks, communication, and secure information transfer",
+      "Quantum AI and quantum security research",
+      "Quantum sensing and measurement systems",
     ],
     outputs: ["Research map", "Technical themes", "Capability direction", "Future pathways"],
     readingPath: ["Explore", "Compare", "Prioritize", "Document"],
   },
   {
-    id: "technologies",
+    id: "research-programs",
     number: "02",
-    eyebrow: "Technology layer",
-    title: "Technologies",
-    shortName: "Technologies",
-    icon: Cpu,
-    summary:
-      "Technologies now lives inside Research and Development as a content section for the quantum systems, platforms, and technical building blocks Quinfosys tracks.",
-    longCopy:
-      "This section collects the technologies that support the company direction. It is not treated as a separate commercial page. Instead, it works like an internal technical catalogue that helps visitors understand the systems, methods, and engineering areas behind Quinfosys research. The focus includes quantum computers, quantum hardware, communication, networks, devices, sensors, quantum AI, robotics, and related infrastructure thinking.",
-    focus: [
-      "Quantum computer concepts and execution models",
-      "Hardware systems, devices, and photonic building blocks",
-      "Communication layers, networks, and secure transfer methods",
-      "Sensors, measurement, and signal interpretation",
-      "Quantum AI, robotics, and intelligent automation research",
-    ],
-    outputs: ["Technology catalogue", "System context", "Research stack", "Engineering bridge"],
-    readingPath: ["Observe", "Classify", "Connect", "Apply"],
-  },
-  {
-    id: "research-projects",
-    number: "03",
-    eyebrow: "Project layer",
-    title: "Research Projects",
-    shortName: "Projects",
+    eyebrow: "Programme layer",
+    title: "Research Programs",
+    shortName: "Programs",
     icon: FlaskConical,
     summary:
-      "Research Projects shows applied work that can connect technical inquiry with prototypes, internal tools, publications, and future product ideas.",
+      "Research Programs organizes structured, long running research efforts that carry a technical question through experiments, prototypes, and results.",
     longCopy:
-      "This section is content focused rather than sales focused. It provides space for applied research work across error correction, machine learning, communication networks, sensing platforms, simulation tools, educational experiments, and internal prototypes. As the company grows, this area can become the archive for project notes, technical summaries, lab style updates, and milestone reports.",
+      "This section gives each research effort a defined scope, team, and milestone path. Programs connect inquiry with prototypes, internal tools, publications, and future product directions, so research progress stays visible and measurable.",
     focus: [
       "Applied quantum error correction and simulation studies",
       "Quantum machine learning and analytics experiments",
-      "Quantum communication and network modeling",
+      "Quantum communication and network modelling",
       "Sensing, measurement, and signal processing concepts",
       "Internal prototypes that can mature into product directions",
     ],
-    outputs: ["Project notes", "Prototype summaries", "Technical logs", "Research milestones"],
+    outputs: ["Program scope", "Prototype summaries", "Technical logs", "Research milestones"],
     readingPath: ["Question", "Experiment", "Validate", "Publish"],
   },
   {
-    id: "collaborations",
+    id: "publications",
+    number: "03",
+    eyebrow: "Dissemination layer",
+    title: "Publications",
+    shortName: "Publications",
+    icon: BookOpen,
+    summary:
+      "Publications collects the articles, journal contributions, and conference outputs through which Quinfosys shares its research.",
+    longCopy:
+      "This section lists research outputs released by Quinfosys and its collaborators. It gives visitors a single place to follow what has been published, where, and how it connects to ongoing research areas and programs.",
+    focus: [
+      "Journal and conference contributions",
+      "Joint publications with academic partners",
+      "Research summaries for non specialist readers",
+      "Citations and links to full texts",
+      "Updates as new work is released",
+    ],
+    outputs: ["Journal articles", "Conference papers", "Research summaries", "Publication index"],
+    readingPath: ["Locate", "Read", "Cite", "Follow"],
+  },
+  {
+    id: "research-papers",
     number: "04",
+    eyebrow: "Paper layer",
+    title: "Research Papers",
+    shortName: "Papers",
+    icon: FileText,
+    summary:
+      "Research Papers presents full length scientific papers describing methods, results, and analysis from Quinfosys research.",
+    longCopy:
+      "This section holds detailed papers that document algorithms, models, experiments, and findings. Each paper is intended to be read as a complete technical record that other researchers can examine, reproduce, and build on.",
+    focus: [
+      "Quantum algorithm and circuit design papers",
+      "Simulation and modelling studies",
+      "Quantum networking and security analysis",
+      "Quantum AI methods and benchmarks",
+      "Preprints and peer reviewed work",
+    ],
+    outputs: ["Full papers", "Preprints", "Methods and results", "Reference lists"],
+    readingPath: ["Frame", "Analyze", "Evaluate", "Reference"],
+  },
+  {
+    id: "patents",
+    number: "05",
+    eyebrow: "Protection layer",
+    title: "Patents",
+    shortName: "Patents",
+    icon: Award,
+    summary:
+      "Patents lists the inventions and intellectual property that Quinfosys develops through its research and engineering work.",
+    longCopy:
+      "This section records the patent filings and granted patents that come out of Quinfosys R&D. It shows the innovation base behind the products and technologies, and the areas where the company is building protected capability.",
+    focus: [
+      "Filed and granted patent records",
+      "Inventions across computing, networks, AI, security, and sensing",
+      "Links between patents and products",
+      "Inventor and filing information",
+      "Updates as new filings are made",
+    ],
+    outputs: ["Patent filings", "Granted patents", "Invention summaries", "IP portfolio"],
+    readingPath: ["Invent", "File", "Examine", "Protect"],
+  },
+  {
+    id: "technical-reports",
+    number: "06",
+    eyebrow: "Report layer",
+    title: "Technical Reports",
+    shortName: "Reports",
+    icon: ClipboardList,
+    summary:
+      "Technical Reports shares detailed engineering and research documentation, including benchmarks, design notes, and experiment write ups.",
+    longCopy:
+      "This section carries working level documentation that sits between a research paper and product documentation. Technical reports describe designs, test setups, benchmark results, and lessons learned so partners and teams can understand how conclusions were reached.",
+    focus: [
+      "Design and architecture notes",
+      "Benchmark and test reports",
+      "Experiment write ups and logs",
+      "Feasibility study summaries",
+      "Engineering lessons and recommendations",
+    ],
+    outputs: ["Design notes", "Benchmark reports", "Experiment logs", "Feasibility summaries"],
+    readingPath: ["Document", "Review", "Share", "Apply"],
+  },
+  {
+    id: "research-collaborations",
+    number: "07",
     eyebrow: "Collaboration layer",
-    title: "Collaborations",
+    title: "Research Collaborations",
     shortName: "Collaborations",
     icon: Network,
     summary:
-      "Collaborations frames how Quinfosys can work with universities, institutions, government bodies, laboratories, and industry partners.",
+      "Research Collaborations frames how Quinfosys works with universities, institutions, government bodies, laboratories, and industry partners.",
     longCopy:
-      "This section gives Research and Development a partnership pathway. It can support academic collaboration, institutional projects, public sector research, industry problem discovery, student programs, and strategic research alliances. The structure keeps collaboration content organized, practical, and credible without making the page feel like a service catalogue.",
+      "This section gives research a partnership pathway. It supports academic collaboration, institutional projects, public sector research, industry problem discovery, student programs, and joint pilots, with knowledge shared through reports, workshops, and publications.",
     focus: [
       "Academic research and student oriented technical programs",
       "Institutional and government research channels",
@@ -129,71 +182,26 @@ const researchSections: ResearchSection[] = [
   },
 ];
 
-const technologies: TechnologyItem[] = [
-  {
-    name: "Quantum Computers",
-    icon: Cpu,
-    description:
-      "Execution models, qubit systems, simulation pathways, and future access models for quantum computation.",
-    signals: ["Qubits", "Gates", "Simulation"],
-  },
-  {
-    name: "Quantum Hardware",
-    icon: Layers,
-    description:
-      "Device concepts, control layers, photonic systems, and hardware aware research direction.",
-    signals: ["Control", "Devices", "Photonic systems"],
-  },
-  {
-    name: "Quantum Communication",
-    icon: Radio,
-    description:
-      "Secure communication concepts, entanglement based transfer ideas, and quantum network readiness.",
-    signals: ["Secure links", "Transfer", "Trust"],
-  },
-  {
-    name: "Quantum Networks",
-    icon: Network,
-    description:
-      "Distributed quantum systems, routing concepts, and network level models for future infrastructure.",
-    signals: ["Nodes", "Routing", "Infrastructure"],
-  },
-  {
-    name: "Quantum Sensors",
-    icon: Satellite,
-    description:
-      "Measurement systems for precision sensing, signal interpretation, and scientific instrumentation.",
-    signals: ["Measurement", "Signals", "Precision"],
-  },
-  {
-    name: "Quantum AI Robotics",
-    icon: Bot,
-    description:
-      "Research direction connecting quantum methods, intelligent systems, robotics, and automation models.",
-    signals: ["AI", "Robotics", "Automation"],
-  },
-];
-
 const researchNotes = [
   {
     label: "Content first",
-    text: "The page works like a research notebook and technology index, not a sales catalogue.",
+    text: "The page works like a research notebook and publication index, not a sales catalogue.",
   },
   {
     label: "Expandable depth",
     text: "Visitors can scan quickly, then open deeper explanations only when they want detail.",
   },
   {
-    label: "Technology nested",
-    text: "Technologies are shown inside Research and Development so the page keeps one clear knowledge structure.",
+    label: "Research outputs",
+    text: "Programs, publications, papers, patents, and reports are kept together in one clear knowledge structure.",
   },
 ];
 
 function ResearchHeroVisual() {
   const stack = [
     { label: "Research", icon: Microscope, text: "Questions and technical directions" },
-    { label: "Technologies", icon: Cpu, text: "Systems and building blocks" },
-    { label: "Projects", icon: FileText, text: "Notes, prototypes, and outputs" },
+    { label: "Programs", icon: FlaskConical, text: "Structured research efforts" },
+    { label: "Publications", icon: FileText, text: "Papers, patents, and reports" },
   ];
 
   return (
@@ -253,7 +261,7 @@ function ResearchHeroVisual() {
           <div className="mt-5 rounded-2xl border border-white/[0.07] bg-[#141414]/50 px-4 py-3">
             <div className="grid grid-cols-3 gap-3 text-center text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400">
               <span>Inquiry</span>
-              <span>Systems</span>
+              <span>Programs</span>
               <span>Outputs</span>
             </div>
           </div>
@@ -293,40 +301,7 @@ function ResearchVisual({
   );
 }
 
-function TechnologyCard({ technology }: { technology: TechnologyItem }) {
-  const Icon = technology.icon;
-
-  return (
-    <article className="group/technology relative overflow-hidden rounded-[1.75rem] border border-white/[0.07] bg-[#141414]/55 p-5 shadow-[0_22px_70px_rgba(0,0,0,0.2)] transition-all duration-300 hover:border-slate-400/25 hover:bg-[#1c1c1c]/62">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(148,163,184,0.1),transparent_40%)] opacity-0 transition-opacity duration-300 group-hover/technology:opacity-100" />
-      <div className="relative flex items-start gap-4">
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/[0.07] bg-[#050505] text-zinc-100">
-          <Icon className="h-5 w-5" strokeWidth={1.5} />
-        </div>
-        <div>
-          <h3 className="text-lg font-semibold tracking-tight text-[#f8f8f8]">
-            {technology.name}
-          </h3>
-          <p className="mt-2 text-sm leading-6 text-slate-400">
-            {technology.description}
-          </p>
-        </div>
-      </div>
-      <div className="relative mt-5 flex flex-wrap gap-2">
-        {technology.signals.map((signal) => (
-          <span
-            key={signal}
-            className="rounded-full border border-white/[0.07] bg-[#050505]/55 px-3 py-1 text-[11px] font-medium text-slate-300"
-          >
-            {signal}
-          </span>
-        ))}
-      </div>
-    </article>
-  );
-}
-
-export default function ResearchDevelopmentPage() {
+export default function ResearchPage() {
   const [openSection, setOpenSection] = useState<string | null>(null);
   const [showTop, setShowTop] = useState(false);
 
@@ -351,13 +326,13 @@ export default function ResearchDevelopmentPage() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-zinc-100/85">
               <Sparkles className="h-3.5 w-3.5" />
-              Research and Development
+              Research
             </div>
             <h1 className="mt-9 max-w-3xl text-4xl font-medium leading-[1.05] tracking-[-0.06em] text-[#f8f8f8] sm:text-5xl lg:text-7xl">
-              A content layer for Quantum Research, Technologies, and Applied Exploration.
+              A content layer for Quantum Research, Publications, and Applied Exploration.
             </h1>
             <p className="mt-8 max-w-2xl text-base font-light leading-8 text-slate-300 sm:text-lg">
-              This page organizes the technical thinking behind Quinfosys. Research areas, technologies, projects, and collaborations are presented as a structured knowledge system rather than a commercial offering page.
+              This page organizes the technical thinking behind Quinfosys. Research areas, programs, publications, papers, patents, technical reports, and collaborations are presented as a structured knowledge system rather than a commercial offering page.
             </p>
             <div className="mt-9 grid gap-3 sm:grid-cols-3">
               {researchNotes.map((note) => (
@@ -499,29 +474,6 @@ export default function ResearchDevelopmentPage() {
                             </div>
                           </div>
                         </div>
-
-                        {section.id === "technologies" && (
-                          <div className="mt-8 rounded-[1.75rem] border border-white/[0.07] bg-[#050505]/55 p-6 sm:p-7">
-                            <div className="mb-5 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
-                              <div>
-                                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-100/70">
-                                  Nested technology catalogue
-                                </p>
-                                <h4 className="mt-2 text-2xl font-medium tracking-[-0.04em] text-[#f8f8f8]">
-                                  Technologies inside Research and Development
-                                </h4>
-                              </div>
-                              <p className="max-w-lg text-sm leading-6 text-slate-400">
-                                These cards keep technology content grouped with research context instead of splitting it into a separate navigation item.
-                              </p>
-                            </div>
-                            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                              {technologies.map((technology) => (
-                                <TechnologyCard key={technology.name} technology={technology} />
-                              ))}
-                            </div>
-                          </div>
-                        )}
                       </div>
                     </div>
                   </div>
@@ -543,7 +495,7 @@ export default function ResearchDevelopmentPage() {
                 Use this page as the long form knowledge layer for Quinfosys research.
               </h2>
               <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-400 sm:text-base">
-                The structure is ready for future research notes, technology explainers, partner summaries, project logs, and publication style content.
+                The structure is ready for research notes, publications, patents, technical reports, partner summaries, and collaboration updates.
               </p>
             </div>
             <a

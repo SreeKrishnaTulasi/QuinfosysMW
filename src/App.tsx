@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import PageShell from './layout/PageShell';
 import CompanyPage from './pages/CompanyPage';
 import Home from './pages/Home';
@@ -8,10 +8,9 @@ import NotFound from './pages/NotFound';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import ProductsPage from './pages/ProductsPage';
-import ResearchDevelopmentPage from './pages/ResearchDevelopmentPage';
+import ResearchPage from './pages/ResearchPage';
 import ResourcesPage from './pages/ResourcesPage';
 import ServicesPage from './pages/ServicesPage';
-import SolutionsPage from './pages/SolutionsPage';
 import TechnologiesPage from './pages/TechnologiesPage';
 
 function RoutedPage({ children }: { children: React.ReactNode }) {
@@ -73,11 +72,12 @@ export default function App() {
       <Routes location={displayLocation}>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<RoutedPage><ProductsPage /></RoutedPage>} />
-        <Route path="/solutions" element={<RoutedPage><SolutionsPage /></RoutedPage>} />
+        <Route path="/solutions" element={<Navigate to="/industries" replace />} />
         <Route path="/technologies" element={<RoutedPage><TechnologiesPage /></RoutedPage>} />
         <Route path="/industries" element={<RoutedPage><IndustriesPage /></RoutedPage>} />
         <Route path="/services" element={<RoutedPage><ServicesPage /></RoutedPage>} />
-        <Route path="/research-development" element={<RoutedPage><ResearchDevelopmentPage /></RoutedPage>} />
+        <Route path="/research" element={<RoutedPage><ResearchPage /></RoutedPage>} />
+        <Route path="/research-development" element={<Navigate to="/research" replace />} />
         <Route path="/resources" element={<RoutedPage><ResourcesPage /></RoutedPage>} />
         <Route path="/company" element={<RoutedPage><CompanyPage /></RoutedPage>} />
         <Route path="/privacy-policy" element={<RoutedPage><PrivacyPolicy /></RoutedPage>} />
