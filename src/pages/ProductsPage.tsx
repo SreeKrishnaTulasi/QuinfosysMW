@@ -164,7 +164,7 @@ const products: ProductSection[] = [
     id: "qiscode",
     number: "05",
     eyebrow: "Platform layer",
-    title: "QisCode \u2014 Quantum IDE",
+    title: "QisCode - Quantum IDE",
     shortName: "QisCode",
     icon: Terminal,
     href: "https://qiscode.quinfosys.com",

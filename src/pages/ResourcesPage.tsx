@@ -595,7 +595,7 @@ export default function ResourcesPage() {
                             <div className={`grid gap-3 sm:grid-cols-2 ${section.audienceLabel ? "mt-3" : "mt-6"}`}>
                               {section.id === "events"
                                 ? section.audience.map((item) => {
-                                    const [eventName, eventDate] = item.split(" \u2014 ");
+                                    const [eventName, eventDate] = item.split(" - ");
                                     return (
                                       <div
                                         key={item}
