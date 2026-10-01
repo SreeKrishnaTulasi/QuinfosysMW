@@ -1,22 +1,21 @@
 import {
   ArrowUp,
   ArrowUpRight,
+  BrainCircuit,
   Check,
   ChevronDown,
-  Cloud,
-  Code2,
-  Globe,
+  Cpu,
   Mail,
   Network,
-  Search,
+  Radar,
+  ShieldCheck,
   Sparkles,
-  Terminal,
   type LucideIcon,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { company } from "../data/content";
 
-type ProductSection = {
+type TechnologySection = {
   id: string;
   number: string;
   eyebrow: string;
@@ -26,275 +25,223 @@ type ProductSection = {
   longCopy: string;
   icon: LucideIcon;
   capabilities: string[];
-  useCases: string[];
-  architecture: string[];
-  href?: string;
+  applications: string[];
+  path: string[];
+  href: string;
 };
 
-const products: ProductSection[] = [
+const technologies: TechnologySection[] = [
   {
-    id: "qucpl",
+    id: "quantum-computing",
     number: "01",
-    eyebrow: "Language layer",
-    title: "Quantum Computing Programming Language",
-    shortName: "QuCPL",
-    icon: Code2,
-    href: "https://qucpl.quinfosys.com",
+    eyebrow: "Core layer",
+    title: "Quantum Computing",
+    shortName: "Quantum Computing",
+    icon: Cpu,
+    href: "https://qc.quinfosys.com",
     summary:
-      "QuCPL is the programming layer for teams that need to express quantum logic clearly, test it safely, and connect it with classical software workflows.",
+      "Quantum Computing is the foundational domain behind the Quinfosys stack, covering circuit models, qubit systems, and quantum algorithm design.",
     longCopy:
-      "Designed as a purpose built quantum language, QuCPL gives developers a cleaner way to describe quantum circuits, algorithms, qubit operations, and classical control logic without forcing every project into low level syntax. It is intended for practical quantum development: readable enough for research teams, structured enough for enterprise engineering, and flexible enough to support simulation, debugging, and future hardware execution paths.",
+      "This technology domain underpins the rest of the Quinfosys stack. The direction covers quantum circuit models, qubit systems, algorithm design, and hybrid classical and quantum computation, giving research and product teams a shared scientific foundation that products, solutions, and industry work can build on.",
     capabilities: [
-      "Expressive syntax for quantum algorithms and circuit logic",
-      "First class support for qubit operations and measurement flow",
-      "Classical and quantum interoperability for hybrid workloads",
-      "Built in direction for simulation, debugging, and validation",
-      "Portable language layer for research, education, and enterprise prototypes",
+      "Quantum circuit and algorithm design fundamentals",
+      "Qubit system modelling and gate level operations",
+      "Hybrid classical and quantum computation research",
+      "Foundational layer for products built across the stack",
+      "Direction built for research teams and platform engineering",
     ],
-    useCases: [
-      "Algorithm design",
-      "Quantum education",
-      "Research prototypes",
-      "Hybrid quantum and classical workflows",
+    applications: [
+      "Algorithm research",
+      "Hardware alignment",
+      "Hybrid computation",
+      "Platform foundations",
     ],
-    architecture: [
-      "Syntax",
-      "Compiler path",
-      "Simulator support",
-      "Debug workflow",
-    ],
+    path: ["Research", "Model", "Simulate", "Apply"],
   },
   {
-    id: "qws",
+    id: "quantum-networks",
     number: "02",
-    eyebrow: "Integration layer",
-    title: "Quantum Web Services",
-    shortName: "QWS",
-    icon: Globe,
-    href: "https://qws.quinfosys.com",
-    summary:
-      "QWS is the web integration layer for connecting quantum capabilities to applications through APIs, service endpoints, and enterprise software systems.",
-    longCopy:
-      "Quantum Web Services is designed for organizations that want quantum enabled capabilities to connect with existing applications instead of living in isolated research tools. QWS focuses on API driven access, quantum microservice patterns, secure communication, and real time result delivery so teams can integrate quantum processing into web, enterprise, and platform workflows with less friction.",
-    capabilities: [
-      "REST oriented access model for quantum algorithm execution",
-      "Quantum microservice architecture for application teams",
-      "Cross platform integration with existing enterprise systems",
-      "Real time quantum processing result delivery direction",
-      "Security focused communication patterns for future ready web infrastructure",
-    ],
-    useCases: [
-      "Application integration",
-      "Quantum APIs",
-      "Enterprise platforms",
-      "Secure web workflows",
-    ],
-    architecture: [
-      "API endpoints",
-      "Service layer",
-      "Result delivery",
-      "Security layer",
-    ],
-  },
-  {
-    id: "qcs",
-    number: "03",
-    eyebrow: "Execution layer",
-    title: "Quantum Computing Services",
-    shortName: "QCS",
-    icon: Cloud,
-    href: "https://qcs.quinfosys.com",
-    summary:
-      "QCS is the execution layer for running quantum workloads through scalable infrastructure, managed resources, and secure hybrid computing paths.",
-    longCopy:
-      "Quantum Computing Services gives organizations a route to experiment with, manage, and scale quantum workloads without rebuilding their infrastructure from the ground up. The product direction focuses on managed quantum execution, hybrid classical and quantum pipelines, controlled resource access, and secure workload management for teams preparing for applied quantum adoption.",
-    capabilities: [
-      "Elastic quantum compute environment for experimentation and scale",
-      "Hybrid classical and quantum pipeline support",
-      "Integrated user, workload, and resource management direction",
-      "Secure access patterns for enterprise grade deployment planning",
-      "Managed structure for research labs, startups, and businesses",
-    ],
-    useCases: [
-      "Quantum workload execution",
-      "Research compute access",
-      "Enterprise pilots",
-      "Hybrid adoption",
-    ],
-    architecture: [
-      "Access layer",
-      "Workload queue",
-      "Hybrid pipelines",
-      "Resource control",
-    ],
-  },
-  {
-    id: "qns",
-    number: "04",
-    eyebrow: "Network layer",
-    title: "Quantum Network Simulator",
-    shortName: "QNS",
+    eyebrow: "Connectivity layer",
+    title: "Quantum Networks",
+    shortName: "Quantum Networks",
     icon: Network,
-    href: "https://qns.quinfosys.com",
+    href: "https://network.quinfosys.com",
     summary:
-      "QNS is the simulation layer for quantum enabled communication, giving teams a structured path to model secure, distributed quantum networking before deployment.",
+      "Quantum Networks covers the science of distributed and secure quantum communication, from protocol design to node to node connectivity.",
     longCopy:
-      "Quantum Network Simulator is designed for organizations planning ahead for distributed and secure quantum communication. The product direction covers simulation of quantum enabled network protocols, secure node to node communication patterns, and infrastructure planning for teams that want to prepare their networking stack for the quantum era without disrupting current systems.",
+      "This technology domain focuses on how quantum systems communicate and connect across distance. The direction covers quantum network protocol design, secure node to node communication, and distributed quantum infrastructure research, forming the scientific base for Quinfosys networking products and future communication solutions.",
     capabilities: [
-      "Simulation of quantum enabled network protocols",
+      "Quantum network protocol research and design",
       "Secure node to node communication modelling",
-      "Infrastructure planning for distributed quantum systems",
-      "Hybrid classical and quantum network compatibility",
-      "Built for telecom, research, and enterprise networking teams",
+      "Distributed quantum infrastructure research",
+      "Hybrid classical and quantum network compatibility studies",
+      "Foundational layer for telecom and infrastructure solutions",
     ],
-    useCases: [
-      "Network simulation",
-      "Distributed networking",
-      "Telecom infrastructure",
-      "Research networking",
+    applications: [
+      "Protocol research",
+      "Secure communication",
+      "Distributed systems",
+      "Telecom foundations",
     ],
-    architecture: [
-      "Node modelling",
-      "Protocol layer",
-      "Secure channel",
-      "Network monitoring",
-    ],
+    path: ["Research", "Design", "Simulate", "Validate"],
   },
   {
-    id: "qiscode",
+    id: "quantum-ai",
+    number: "03",
+    eyebrow: "Intelligence layer",
+    title: "Quantum AI",
+    shortName: "Quantum AI",
+    icon: BrainCircuit,
+    href: "https://ai.quinfosys.com",
+    summary:
+      "Quantum AI combines quantum computing with artificial intelligence, researching quantum enhanced learning, inference, and decision systems.",
+    longCopy:
+      "This technology domain sits at the intersection of quantum computing and AI. The direction covers quantum enhanced machine learning, pattern recognition, and hybrid inference research, giving teams a scientific base to evaluate where quantum methods can extend classical AI approaches as hardware and tooling mature.",
+    capabilities: [
+      "Quantum enhanced machine learning research",
+      "Hybrid classical and quantum inference studies",
+      "Pattern recognition for complex, high dimensional data",
+      "Benchmarking across classical and quantum model variants",
+      "Foundational layer for AI driven products and solutions",
+    ],
+    applications: [
+      "Machine learning research",
+      "Inference systems",
+      "Pattern recognition",
+      "AI foundations",
+    ],
+    path: ["Research", "Model", "Train", "Evaluate"],
+  },
+  {
+    id: "quantum-security",
+    number: "04",
+    eyebrow: "Trust layer",
+    title: "Quantum Security",
+    shortName: "Quantum Security",
+    icon: ShieldCheck,
+    href: "https://security.quinfosys.com",
+    summary:
+      "Quantum Security researches the cryptographic transition created by quantum computing, covering encryption readiness and secure key distribution.",
+    longCopy:
+      "This technology domain addresses the security implications of quantum computing. The direction covers post quantum encryption research, quantum key distribution concepts, and migration planning, forming the scientific base for crypto agility and security services across Quinfosys solutions.",
+    capabilities: [
+      "Post quantum encryption research and readiness studies",
+      "Quantum key distribution concept research",
+      "Cryptographic migration planning frameworks",
+      "Security architecture research for infrastructure and applications",
+      "Foundational layer for crypto agility and security solutions",
+    ],
+    applications: [
+      "Encryption research",
+      "Key distribution",
+      "Migration planning",
+      "Security foundations",
+    ],
+    path: ["Research", "Assess", "Harden", "Monitor"],
+  },
+  {
+    id: "quantum-sensing",
     number: "05",
-    eyebrow: "Platform layer",
-    title: "QisCode \u2014 Quantum IDE",
-    shortName: "QisCode",
-    icon: Terminal,
-    href: "https://qiscode.quinfosys.com",
+    eyebrow: "Measurement layer",
+    title: "Quantum Sensing",
+    shortName: "Quantum Sensing",
+    icon: Radar,
+    href: "https://sensing.quinfosys.com",
     summary:
-      "QisCode is the quantum IDE for designing, simulating, transpiling, and executing quantum programs in one connected workspace.",
+      "Quantum Sensing researches quantum enabled measurement and detection, enabling precision sensing beyond classical instrument limits.",
     longCopy:
-      "QisCode brings the full quantum development cycle into a single IDE. The product direction covers circuit design, simulation, transpilation across backends, and execution management, giving developers and research teams a consistent workspace instead of stitching together separate tools for each stage of quantum program development.",
+      "This technology domain explores how quantum effects can be used for highly precise measurement and detection. The direction covers quantum enabled sensors, measurement precision research, and detection methods, forming a scientific base that can support future industry work in materials, energy, aerospace, and defence.",
     capabilities: [
-      "Unified workspace for quantum circuit design and editing",
-      "Built in simulation for testing before hardware execution",
-      "Transpilation support across multiple quantum backends",
-      "Execution management and run history in one place",
-      "Direction built for developers, students, and research teams",
+      "Quantum enabled sensor and measurement research",
+      "Precision detection methods beyond classical limits",
+      "Research into environmental and structural sensing applications",
+      "Hybrid classical and quantum measurement pipelines",
+      "Foundational layer for materials, energy, and aerospace work",
     ],
-    useCases: [
-      "Circuit design",
-      "Simulation and testing",
-      "Cross backend transpilation",
-      "Execution management",
+    applications: [
+      "Precision measurement",
+      "Detection research",
+      "Sensor design",
+      "Applied research",
     ],
-    architecture: [
-      "Design workspace",
-      "Simulation engine",
-      "Transpiler",
-      "Execution manager",
-    ],
-  },
-  {
-    id: "qseo",
-    number: "06",
-    eyebrow: "Optimization layer",
-    title: "Quantum Search Engine Optimization",
-    shortName: "QSEO",
-    icon: Search,
-    href: "https://qseo.quinfosys.com",
-    summary:
-      "QSEO applies quantum inspired optimization to search and ranking problems, helping teams process large scale relevance and discovery workloads faster.",
-    longCopy:
-      "Quantum Search Engine Optimization brings quantum inspired optimization techniques to search, ranking, and discovery problems. The product direction targets large scale relevance modelling, content and keyword optimization, and search infrastructure teams that want a forward looking path toward quantum accelerated information retrieval.",
-    capabilities: [
-      "Quantum inspired ranking and relevance optimization",
-      "Large scale search and discovery workload support",
-      "Direction for content and keyword optimization at scale",
-      "Hybrid classical and quantum search infrastructure compatibility",
-      "Built for search platforms, publishers, and digital teams",
-    ],
-    useCases: [
-      "Search optimization",
-      "Ranking systems",
-      "Content discovery",
-      "Digital platforms",
-    ],
-    architecture: [
-      "Query input",
-      "Optimization core",
-      "Ranking output",
-      "Feedback loop",
-    ],
+    path: ["Research", "Design", "Test", "Validate"],
   },
 ];
 
-const stackMarkers = [
-  { label: "Language", text: "Design quantum logic" },
-  { label: "Cloud", text: "Run managed workloads" },
-  { label: "Web", text: "Connect with applications" },
+const technologyMarkers = [
+  { label: "Research", text: "Establish the scientific and engineering base" },
+  { label: "Develop", text: "Turn research into dependable technology" },
+  { label: "Apply", text: "Carry the domain into products and industries" },
 ];
 
-
-function ProductHeroInfographic() {
-  const layers = [
-    { icon: Code2, label: "QuCPL", text: "Language layer" },
-    { icon: Cloud, label: "QCS", text: "Cloud execution" },
-    { icon: Globe, label: "QWS", text: "Web integration" },
+function TechnologyHeroInfographic() {
+  const steps = [
+    { icon: Cpu, label: "Computing", text: "Circuits, qubits, and algorithms" },
+    { icon: Network, label: "Networks", text: "Distributed quantum connectivity" },
+    { icon: ShieldCheck, label: "Security", text: "Quantum era cryptographic trust" },
   ];
 
   return (
-    <div className="relative mx-auto mt-12 w-full max-w-md lg:mt-0 lg:max-w-none">
-      <div className="absolute -inset-8 rounded-[3rem] bg-[radial-gradient(circle_at_50%_45%,rgba(255,255,255,0.22),transparent_58%)] blur-2xl" />
+    <div
+      className="relative mx-auto mt-12 w-full max-w-md lg:mt-0 lg:max-w-none"
+      aria-hidden="true"
+    >
+      <div className="absolute -inset-8 rounded-[3rem] bg-[radial-gradient(circle_at_50%_45%,rgba(245,245,245,0.18),transparent_58%)] blur-2xl" />
       <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.055] p-4 shadow-[0_30px_120px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-5">
-        <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.13),transparent_34%),radial-gradient(circle_at_80%_10%,rgba(245,245,245,0.16),transparent_34%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(245,245,245,0.12),transparent_34%),radial-gradient(circle_at_82%_12%,rgba(212,212,212,0.14),transparent_34%)]" />
         <div className="relative rounded-[1.5rem] border border-white/10 bg-[#070707]/85 p-5 sm:p-6">
           <div className="mb-6 flex items-center justify-between gap-4">
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-zinc-100/70">
-                Product system
+                Technology system
               </p>
               <h2 className="mt-2 text-2xl font-medium tracking-[-0.04em] text-[#f8f8f8] sm:text-3xl">
-                Build. Run. Integrate.
+                Research. Develop. Apply.
               </h2>
             </div>
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f8f8f8] text-[#111111] shadow-2xl">
-              <Sparkles className="h-5 w-5" strokeWidth={1.6} />
+              <Cpu className="h-5 w-5" strokeWidth={1.6} />
             </div>
           </div>
 
-          <div className="space-y-3">
-            {layers.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.label}
-                  className="group/layer relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.055] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.08]"
-                >
-                  <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-white/70 to-zinc-500/70" />
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-[#111111] text-zinc-100">
-                      <Icon className="h-5 w-5" strokeWidth={1.5} />
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.045] p-4">
+            <div className="space-y-3">
+              {steps.map((step, index) => {
+                const Icon = step.icon;
+
+                return (
+                  <div
+                    key={step.label}
+                    className="group/step relative flex items-center gap-4 rounded-2xl border border-white/10 bg-[#111111]/75 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.075]"
+                  >
+                    <div className="z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-[#070707] text-zinc-100 shadow-xl">
+                      <Icon className="h-4.5 w-4.5" strokeWidth={1.55} />
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center justify-between gap-3">
                         <p className="text-base font-semibold tracking-tight text-[#f8f8f8]">
-                          {item.label}
+                          {step.label}
                         </p>
                         <span className="rounded-full border border-white/10 px-2.5 py-1 text-[10px] font-semibold text-slate-500">
                           0{index + 1}
                         </span>
                       </div>
                       <p className="mt-1 text-xs leading-5 text-slate-400">
-                        {item.text}
+                        {step.text}
                       </p>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
 
           <div className="mt-5 grid grid-cols-3 gap-2 text-center">
-            {['SDK', 'Cloud', 'API'].map((item) => (
-              <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.04] px-3 py-3">
+            {["Science", "Engineering", "Scale"].map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-white/10 bg-white/[0.04] px-3 py-3"
+              >
                 <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">
                   {item}
                 </p>
@@ -307,22 +254,24 @@ function ProductHeroInfographic() {
   );
 }
 
-function ProductVisual({
-  product,
+function TechnologyVisual({
+  technology,
   isOpen,
 }: {
-  product: ProductSection;
+  technology: TechnologySection;
   isOpen: boolean;
 }) {
-  const Icon = product.icon;
+  const Icon = technology.icon;
 
   return (
-    <div className="relative mx-auto flex aspect-square w-full max-w-[18rem] items-center justify-center rounded-[2.5rem] border border-slate-700/45 bg-gradient-to-br from-[#181818] via-[#0c0c0c] to-[#070707] shadow-[0_30px_90px_rgba(0,0,0,0.38)] sm:max-w-sm lg:max-w-md">
+    <div className="relative mx-auto flex aspect-square w-full max-w-[18rem] items-center justify-center overflow-hidden rounded-[2.5rem] border border-slate-700/45 bg-gradient-to-br from-[#181818] via-[#0c0c0c] to-[#070707] shadow-[0_30px_90px_rgba(0,0,0,0.38)] sm:max-w-sm lg:max-w-md">
       <div className="absolute inset-5 rounded-[2rem] border border-white/[0.06]" />
       <div className="absolute inset-10 rounded-full border border-white/10" />
-      <div className="absolute h-[72%] w-[72%] rounded-full bg-[radial-gradient(circle,_rgba(245,245,245,0.18),_rgba(212,212,212,0.08)_45%,_transparent_72%)] blur-md transition-transform duration-700 group-hover:scale-110" />
+      <div className="absolute h-[74%] w-[74%] rounded-full bg-[radial-gradient(circle,_rgba(245,245,245,0.17),_rgba(212,212,212,0.09)_46%,_transparent_73%)] blur-md transition-transform duration-700 group-hover:scale-110" />
       <div className="absolute left-1/2 top-8 h-[calc(100%-4rem)] w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-white/20 to-transparent" />
       <div className="absolute top-1/2 h-px w-[calc(100%-4rem)] -translate-y-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+      <div className="absolute left-8 top-8 h-16 w-16 rounded-full border border-white/10 bg-white/[0.035] blur-[1px]" />
+      <div className="absolute bottom-14 right-8 h-20 w-20 rounded-full border border-white/10 bg-white/[0.045] blur-[1px]" />
       <div
         className={`absolute h-20 w-20 rounded-full border border-white/15 bg-white/[0.06] transition-all duration-700 sm:h-24 sm:w-24 ${
           isOpen
@@ -335,19 +284,19 @@ function ProductVisual({
       </div>
       <div className="absolute bottom-7 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full border border-white/10 bg-white/[0.07] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-300/80 backdrop-blur-md">
         <Sparkles className="h-3 w-3 text-zinc-100" strokeWidth={1.5} />
-        {product.shortName}
+        {technology.shortName}
       </div>
     </div>
   );
 }
 
-function ProductBlock({
-  product,
+function TechnologyBlock({
+  technology,
   index,
   isOpen,
   onToggle,
 }: {
-  product: ProductSection;
+  technology: TechnologySection;
   index: number;
   isOpen: boolean;
   onToggle: () => void;
@@ -355,7 +304,7 @@ function ProductBlock({
   const isReversed = index % 2 === 1;
 
   return (
-    <article className="group border-t border-slate-700/35 py-12 first:border-t-0 sm:py-14 lg:py-20">
+    <article id={technology.id} className="group scroll-mt-28 border-t border-slate-700/35 py-12 first:border-t-0 sm:py-14 lg:py-20">
       <div
         className={`grid items-center gap-10 rounded-[2rem] border border-white/[0.06] bg-gradient-to-br from-white/[0.055] via-white/[0.025] to-transparent p-5 shadow-[0_30px_100px_rgba(0,0,0,0.22)] backdrop-blur-sm sm:p-7 lg:grid-cols-[1fr_0.82fr] lg:gap-16 lg:p-10 ${
           isReversed ? "lg:grid-cols-[0.82fr_1fr]" : ""
@@ -364,23 +313,20 @@ function ProductBlock({
         <div className={isReversed ? "lg:order-2" : ""}>
           <div className="mb-6 flex flex-wrap items-center gap-3">
             <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-400">
-              {product.number}
+              {technology.number}
             </span>
             <span className="rounded-full border border-white/15 bg-white/[0.08] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-zinc-100/85">
-              {product.eyebrow}
+              {technology.eyebrow}
             </span>
           </div>
 
           <h2 className="max-w-4xl text-3xl font-medium tracking-[-0.045em] text-[#f8f8f8] sm:text-4xl lg:text-6xl">
-            {product.title}
+            {technology.title}
           </h2>
-          <p className="mt-3 text-xl font-light tracking-tight text-slate-400 sm:text-2xl">
-            {product.shortName}
-          </p>
 
           <div className="relative mt-8 max-w-2xl overflow-hidden">
             <p className="text-[1.02rem] font-light leading-8 text-slate-300 sm:text-lg sm:leading-9">
-              {product.summary}
+              {technology.summary}
             </p>
             <div
               className={`grid transition-[grid-template-rows,opacity] duration-700 ease-out ${
@@ -391,7 +337,7 @@ function ProductBlock({
             >
               <div className="overflow-hidden">
                 <p className="pt-5 text-sm font-light leading-8 text-slate-400 sm:text-base">
-                  {product.longCopy}
+                  {technology.longCopy}
                 </p>
               </div>
             </div>
@@ -402,7 +348,7 @@ function ProductBlock({
               type="button"
               onClick={onToggle}
               aria-expanded={isOpen}
-              aria-controls={`${product.id}-details`}
+              aria-controls={`${technology.id}-details`}
               className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.06] px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#f8f8f8] transition-all duration-300 hover:border-white/25 hover:bg-[#f8f8f8] hover:text-[#111111]"
             >
               {isOpen ? "Show less" : "Read more"}
@@ -411,27 +357,25 @@ function ProductBlock({
                 strokeWidth={1.5}
               />
             </button>
-            {product.href && (
-              <a
-                href={product.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.06] px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#f8f8f8] transition-all duration-300 hover:border-white/25 hover:bg-[#f8f8f8] hover:text-[#111111]"
-              >
-                Visit product
-                <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
-              </a>
-            )}
+            <a
+              href={technology.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.06] px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#f8f8f8] transition-all duration-300 hover:border-white/25 hover:bg-[#f8f8f8] hover:text-[#111111]"
+            >
+              Visit technology
+              <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
+            </a>
           </div>
         </div>
 
         <div className={isReversed ? "lg:order-1" : ""}>
-          <ProductVisual product={product} isOpen={isOpen} />
+          <TechnologyVisual technology={technology} isOpen={isOpen} />
         </div>
       </div>
 
       <div
-        id={`${product.id}-details`}
+        id={`${technology.id}-details`}
         className={`grid transition-[grid-template-rows,opacity,margin-top] duration-700 ease-out ${
           isOpen
             ? "mt-7 grid-rows-[1fr] opacity-100 sm:mt-9"
@@ -445,7 +389,7 @@ function ProductBlock({
                 Core capabilities
               </p>
               <ul className="space-y-3">
-                {product.capabilities.map((item) => (
+                {technology.capabilities.map((item) => (
                   <li
                     key={item}
                     className="flex gap-3 text-sm leading-6 text-slate-700"
@@ -462,10 +406,10 @@ function ProductBlock({
 
             <div className="rounded-[1.5rem] border border-white/10 bg-[#0b0b0b] p-6 text-[#f8f8f8]">
               <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500">
-                Built for
+                Applications
               </p>
               <div className="flex flex-wrap gap-2">
-                {product.useCases.map((item) => (
+                {technology.applications.map((item) => (
                   <span
                     key={item}
                     className="rounded-full border border-white/10 bg-white/[0.055] px-3 py-2 text-xs text-slate-300"
@@ -478,10 +422,10 @@ function ProductBlock({
 
             <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.045] p-6 text-[#f8f8f8]">
               <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500">
-                Product structure
+                Technology path
               </p>
               <div className="space-y-3">
-                {product.architecture.map((item, step) => (
+                {technology.path.map((item, step) => (
                   <div
                     key={item}
                     className="flex items-center justify-between rounded-full border border-white/10 bg-[#090909]/70 px-4 py-3 text-sm text-slate-300"
@@ -501,8 +445,8 @@ function ProductBlock({
   );
 }
 
-export default function ProductsPage() {
-  const [openProduct, setOpenProduct] = useState<string | null>(null);
+export default function TechnologiesPage() {
+  const [openTechnology, setOpenTechnology] = useState<string | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
@@ -524,25 +468,25 @@ export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-[#080808] text-[#f8f8f8]">
       <section className="relative isolate overflow-hidden px-6 py-20 sm:py-24 lg:py-32">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(245,245,245,0.13),transparent_30%),radial-gradient(circle_at_84%_8%,rgba(212,212,212,0.12),transparent_32%),linear-gradient(180deg,#171717_0%,#0b0b0b_54%,#080808_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(245,245,245,0.13),transparent_30%),radial-gradient(circle_at_84%_8%,rgba(212,212,212,0.12),transparent_32%),linear-gradient(180deg,#141414_0%,#0b0b0b_54%,#080808_100%)]" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-32 bg-gradient-to-b from-transparent to-[#0d0d0d]" />
 
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.04fr_0.66fr] lg:gap-14">
           <div className="max-w-5xl">
             <p className="mb-6 text-xs font-semibold uppercase tracking-[0.28em] text-zinc-100/70">
-              Products
+              Technologies
             </p>
             <h1 className="text-4xl font-medium tracking-[-0.05em] text-[#f8f8f8] sm:text-5xl lg:text-7xl">
-              Six Quantum Products. One connected stack.
+              Five core technologies. One quantum foundation.
             </h1>
             <p className="mt-8 max-w-3xl text-[1.02rem] font-light leading-8 text-slate-300 sm:text-lg sm:leading-9">
-              Quinfosys products are structured as a connected quantum stack: a
-              development language, a cloud execution layer, and a web services
-              layer for bringing quantum capability into practical software
-              systems.
+              Quinfosys technologies are the foundational scientific and
+              engineering domains behind every product, solution, and
+              industry practice, spanning computing, networks, AI, security,
+              and sensing.
             </p>
           </div>
-          <ProductHeroInfographic />
+          <TechnologyHeroInfographic />
         </div>
       </section>
 
@@ -550,14 +494,14 @@ export default function ProductsPage() {
         <div className="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-slate-500">
-              Product pathway
+              Technology pathway
             </p>
             <h2 className="mt-2 text-2xl font-medium tracking-[-0.035em] sm:text-3xl">
-              Explore the stack from concept to integration.
+              From foundational research to applied technology.
             </h2>
           </div>
           <div className="grid gap-3 sm:grid-cols-3 lg:min-w-[34rem]">
-            {stackMarkers.map((item, index) => (
+            {technologyMarkers.map((item, index) => (
               <div
                 key={item.label}
                 className="rounded-2xl border border-slate-200 bg-white/65 p-4 shadow-sm backdrop-blur-sm"
@@ -579,14 +523,14 @@ export default function ProductsPage() {
 
       <section className="px-6 py-10 sm:py-14 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          {products.map((product, index) => (
-            <ProductBlock
-              key={product.id}
-              product={product}
+          {technologies.map((technology, index) => (
+            <TechnologyBlock
+              key={technology.id}
+              technology={technology}
               index={index}
-              isOpen={openProduct === product.id}
+              isOpen={openTechnology === technology.id}
               onToggle={() =>
-                setOpenProduct(openProduct === product.id ? null : product.id)
+                setOpenTechnology(openTechnology === technology.id ? null : technology.id)
               }
             />
           ))}
@@ -597,14 +541,14 @@ export default function ProductsPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-8 rounded-[2rem] border border-white/10 bg-gradient-to-br from-[#f7f7f7] to-[#e8e8e8] p-6 text-[#171717] shadow-2xl sm:p-8 lg:grid-cols-[1fr_auto] lg:p-10">
           <div>
             <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate-500">
-              Product access
+              Technology access
             </p>
             <h2 className="text-3xl font-medium tracking-tighter sm:text-4xl">
-              Need a demo, technical walkthrough, or product discussion?
+              Need to align technology to your roadmap?
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
-              Reach the Quinfosys team directly. We will align the discussion
-              around the product layer you want to explore.
+              Reach the Quinfosys team directly. The discussion can be aligned
+              around computing, networks, AI, security, or sensing.
             </p>
           </div>
           <a

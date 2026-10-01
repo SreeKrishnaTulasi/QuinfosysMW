@@ -2,14 +2,13 @@ import {
   ArrowUp,
   ArrowUpRight,
   Atom,
-  BrainCircuit,
   Check,
   ChevronDown,
   FlaskConical,
   HeartPulse,
   Landmark,
   Mail,
-  ShieldCheck,
+  Rocket,
   Sparkles,
   Truck,
   Zap,
@@ -27,6 +26,7 @@ type IndustrySection = {
   summary: string;
   longCopy: string;
   icon: LucideIcon;
+  businessModel: string;
   capabilities: string[];
   businessUse: string[];
   deliveryPath: string[];
@@ -35,67 +35,14 @@ type IndustrySection = {
 
 const industries: IndustrySection[] = [
   {
-    id: "ai",
-    number: "01",
-    eyebrow: "Intelligence layer",
-    title: "Quantum AI",
-    shortName: "Quantum AI",
-    icon: BrainCircuit,
-    href: "https://ai.quinfosys.com",
-    summary:
-      "Quantum AI brings quantum accelerated methods into machine learning, pattern recognition, and decision systems for organizations building next generation intelligent applications.",
-    longCopy:
-      "This industry area is built for teams exploring how quantum computing can extend classical AI pipelines. The direction covers quantum enhanced model training, feature space exploration, and hybrid classical and quantum inference paths, giving research and enterprise groups a structured way to evaluate quantum advantage across intelligent systems.",
-    capabilities: [
-      "Quantum enhanced model training and evaluation",
-      "Hybrid classical and quantum inference pipelines",
-      "Pattern recognition for complex, high dimensional data",
-      "Research friendly benchmarking across model variants",
-      "Direction built for AI teams and enterprise innovation groups",
-    ],
-    businessUse: [
-      "Machine learning",
-      "Decision systems",
-      "Pattern recognition",
-      "AI research",
-    ],
-    deliveryPath: ["Assess", "Model", "Train", "Deploy"],
-  },
-  {
-    id: "security",
-    number: "02",
-    eyebrow: "Trust layer",
-    title: "Quantum Security",
-    shortName: "Quantum Security",
-    icon: ShieldCheck,
-    href: "https://security.quinfosys.com",
-    summary:
-      "Quantum Security prepares organizations for quantum era risk through post quantum encryption planning, secure key distribution direction, and future proof infrastructure thinking.",
-    longCopy:
-      "This industry area addresses the security transition created by quantum computing. Quinfosys frames the work around quantum resistant encryption readiness, secure protocol planning, key distribution concepts, and practical migration paths so organizations can begin preparing sensitive systems before quantum threats become operationally urgent.",
-    capabilities: [
-      "Quantum risk review for sensitive data and communication paths",
-      "Post quantum encryption readiness and migration planning",
-      "Quantum key distribution concept alignment for secure channels",
-      "Security architecture direction for infrastructure and applications",
-      "Governance support for long term cryptographic transition planning",
-    ],
-    businessUse: [
-      "Data protection",
-      "Infrastructure security",
-      "Encryption planning",
-      "Risk readiness",
-    ],
-    deliveryPath: ["Review", "Harden", "Transition", "Monitor"],
-  },
-  {
     id: "fintech",
-    number: "03",
+    number: "01",
     eyebrow: "Financial layer",
     title: "Quantum FinTech",
     shortName: "Quantum FinTech",
     icon: Landmark,
     href: "https://fintech.quinfosys.com",
+    businessModel: "B2B",
     summary:
       "Quantum FinTech applies quantum computing to portfolio modelling, risk analysis, and fraud detection for financial institutions preparing for compute intensive workloads.",
     longCopy:
@@ -116,15 +63,16 @@ const industries: IndustrySection[] = [
     deliveryPath: ["Frame", "Model", "Simulate", "Deploy"],
   },
   {
-    id: "healthcare",
-    number: "04",
+    id: "health-intelligence",
+    number: "02",
     eyebrow: "Care layer",
-    title: "Quantum Healthcare",
-    shortName: "Quantum Healthcare",
+    title: "Quantum Health Intelligence System",
+    shortName: "Quantum Health Intelligence System",
     icon: HeartPulse,
     href: "https://healthcare.quinfosys.com",
+    businessModel: "B2B + B2C",
     summary:
-      "Quantum Healthcare directs quantum computing toward diagnostics support, treatment modelling, and healthcare operations for providers and research institutions.",
+      "Quantum Health Intelligence System directs quantum computing toward diagnostics support, treatment modelling, and healthcare operations for providers and research institutions.",
     longCopy:
       "This industry area is built for healthcare providers and research institutions exploring quantum enhanced approaches to diagnostics support, treatment pathway modelling, and operational planning. The direction combines quantum aware data modelling with practical healthcare workflow structures so early experimentation stays grounded in real clinical and operational needs.",
     capabilities: [
@@ -144,12 +92,13 @@ const industries: IndustrySection[] = [
   },
   {
     id: "drug-discovery",
-    number: "05",
+    number: "03",
     eyebrow: "Discovery layer",
     title: "Quantum Drug Discovery",
     shortName: "Quantum Drug Discovery",
     icon: FlaskConical,
     href: "https://drug.quinfosys.com",
+    businessModel: "B2B + B2C",
     summary:
       "Quantum Drug Discovery applies quantum computing to molecular simulation and candidate screening, helping research teams explore drug candidates with greater speed and precision.",
     longCopy:
@@ -170,15 +119,16 @@ const industries: IndustrySection[] = [
     deliveryPath: ["Model", "Simulate", "Screen", "Validate"],
   },
   {
-    id: "materials",
-    number: "06",
+    id: "material-discovery",
+    number: "04",
     eyebrow: "Structure layer",
-    title: "Quantum Materials",
-    shortName: "Quantum Materials",
+    title: "Quantum Material Discovery",
+    shortName: "Quantum Material Discovery",
     icon: Atom,
-    href: "https://materials.quinfosys.com",
+    href: "https://material.quinfosys.com",
+    businessModel: "B2B",
     summary:
-      "Quantum Materials directs quantum simulation toward material property prediction and discovery, supporting research into new alloys, compounds, and structures.",
+      "Quantum Material Discovery directs quantum simulation toward material property prediction and discovery, supporting research into new alloys, compounds, and structures.",
     longCopy:
       "This industry area is designed for research and engineering teams studying material behaviour at a scale where classical simulation becomes limited. The direction covers quantum simulation of atomic and molecular structures, property prediction, and discovery workflows for new materials across manufacturing, energy, and advanced engineering applications.",
     capabilities: [
@@ -198,12 +148,13 @@ const industries: IndustrySection[] = [
   },
   {
     id: "supply-chain",
-    number: "07",
+    number: "05",
     eyebrow: "Logistics layer",
     title: "Quantum Supply Chain",
     shortName: "Quantum Supply Chain",
     icon: Truck,
     href: "https://supplychain.quinfosys.com",
+    businessModel: "B2B",
     summary:
       "Quantum Supply Chain applies quantum optimization to routing, inventory, and logistics planning problems that are difficult to scale with classical methods alone.",
     longCopy:
@@ -224,13 +175,42 @@ const industries: IndustrySection[] = [
     deliveryPath: ["Map", "Model", "Optimize", "Deploy"],
   },
   {
+    id: "aerospace-defence",
+    number: "06",
+    eyebrow: "Aerospace layer",
+    title: "Quantum Aerospace & Defence",
+    shortName: "Quantum Aerospace & Defence",
+    icon: Rocket,
+    href: "https://aerospace.quinfosys.com",
+    businessModel: "B2B + B2G",
+    summary:
+      "Quantum Aerospace & Defence applies quantum computing to navigation, materials, and secure communication challenges across aerospace and defence programs.",
+    longCopy:
+      "This industry area is built for aerospace and defence organizations exploring quantum approaches to navigation precision, materials research, and secure communication. The direction covers quantum enabled sensing and navigation, secure defence communication, and materials modelling for demanding aerospace environments, aligned with government and enterprise program requirements.",
+    capabilities: [
+      "Quantum enabled navigation and positioning research",
+      "Secure communication direction for defence programs",
+      "Materials modelling for aerospace grade components",
+      "Hybrid classical and quantum simulation pipelines",
+      "Built for aerospace manufacturers, defence programs, and government partners",
+    ],
+    businessUse: [
+      "Navigation systems",
+      "Secure communication",
+      "Materials research",
+      "Defence programs",
+    ],
+    deliveryPath: ["Assess", "Model", "Secure", "Deploy"],
+  },
+  {
     id: "energy",
-    number: "08",
+    number: "07",
     eyebrow: "Grid layer",
     title: "Quantum Energy",
     shortName: "Quantum Energy",
     icon: Zap,
     href: "https://energy.quinfosys.com",
+    businessModel: "B2B",
     summary:
       "Quantum Energy directs quantum computing toward grid optimization, load forecasting, and energy resource planning for utilities and energy providers.",
     longCopy:
@@ -258,10 +238,11 @@ const industryMarkers = [
   { label: "Scale", text: "Move safely toward operational adoption" },
 ];
 
+
 function IndustryHeroInfographic() {
   const steps = [
-    { icon: BrainCircuit, label: "AI", text: "Intelligence and decision systems" },
-    { icon: ShieldCheck, label: "Security", text: "Quantum era trust and risk" },
+    { icon: Landmark, label: "FinTech", text: "Financial risk and fraud modelling" },
+    { icon: HeartPulse, label: "Health", text: "Diagnostics and treatment modelling" },
     { icon: FlaskConical, label: "Discovery", text: "Molecular and materials research" },
   ];
 
@@ -284,7 +265,7 @@ function IndustryHeroInfographic() {
               </h2>
             </div>
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f8f8f8] text-[#111111] shadow-2xl">
-              <BrainCircuit className="h-5 w-5" strokeWidth={1.6} />
+              <Landmark className="h-5 w-5" strokeWidth={1.6} />
             </div>
           </div>
 
@@ -401,6 +382,9 @@ function IndustryBlock({
             </span>
             <span className="rounded-full border border-white/15 bg-white/[0.08] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-zinc-100/85">
               {industry.eyebrow}
+            </span>
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-400">
+              {industry.businessModel}
             </span>
           </div>
 
@@ -567,10 +551,11 @@ export default function IndustriesPage() {
               Quantum built for the industries that run the world.
             </h1>
             <p className="mt-8 max-w-3xl text-[1.02rem] font-light leading-8 text-slate-300 sm:text-lg sm:leading-9">
-              Quinfosys industry practices apply quantum computing to AI,
-              security, fintech, healthcare, drug discovery, materials,
-              supply chain, and energy, giving sector teams a direct path
-              from quantum capability to operational value.
+              Quinfosys industry practices apply quantum computing to
+              FinTech, health intelligence, drug discovery, material
+              discovery, supply chain, aerospace and defence, and energy,
+              giving sector teams a direct path from quantum capability to
+              operational value.
             </p>
           </div>
           <IndustryHeroInfographic />
@@ -635,8 +620,8 @@ export default function IndustriesPage() {
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
               Reach the Quinfosys team directly. The discussion can be aligned
-              around AI, security, fintech, healthcare, drug discovery,
-              materials, supply chain, or energy.
+              around FinTech, health intelligence, drug discovery, material
+              discovery, supply chain, aerospace and defence, or energy.
             </p>
           </div>
           <a

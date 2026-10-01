@@ -1,14 +1,12 @@
 import {
   ArrowRight,
   BookOpen,
-  BrainCircuit,
   ChartBar,
   ChevronRight,
   Cloud,
   Code2,
   Cpu,
   FileText,
-  FlaskConical,
   Globe,
   GraduationCap,
   Layers,
@@ -54,50 +52,38 @@ const productPortfolio: ProductVisual[] = [
   {
     icon: <Code2 strokeWidth={1.5} />,
     title: "QuCPL",
-    desc: "Domain-specific quantum programming language with intuitive syntax and classical interoperability.",
+    desc: "Quantum Computing Programming Language for expressing quantum logic clearly and connecting it with classical workflows.",
     href: "/products#qucpl",
   },
   {
-    icon: <Terminal strokeWidth={1.5} />,
-    title: "QisCode - Quantum IDE Platform",
-    desc: "Unified quantum computing platform for designing, simulating, transpiling, and executing quantum programs.",
-    href: "/products#qiscode",
-  },
-  {
-    icon: <FlaskConical strokeWidth={1.5} />,
-    title: "Quantum Drug Discovery",
-    desc: "Quantum accelerated molecular simulation and candidate screening for pharma and life sciences research.",
-    href: "/products#qdd",
-  },
-  {
-    icon: <Network strokeWidth={1.5} />,
-    title: "Quantum Network System",
-    desc: "Connectivity layer for secure, distributed quantum enabled communication and networking infrastructure.",
-    href: "/products#qns",
-  },
-  {
-    icon: <BrainCircuit strokeWidth={1.5} />,
-    title: "Quantum Brain",
-    desc: "Cognition layer combining quantum computing with AI for quantum enhanced learning and decision systems.",
-    href: "/products#brain",
+    icon: <Globe strokeWidth={1.5} />,
+    title: "QWS",
+    desc: "Quantum Web Services for integrating quantum processing into enterprise systems through APIs.",
+    href: "/products#qws",
   },
   {
     icon: <Cloud strokeWidth={1.5} />,
-    title: "QCS Cloud",
-    desc: "On-demand quantum cloud infrastructure for secure workload access and hybrid execution.",
+    title: "QCS",
+    desc: "Quantum Computing Services for running quantum workloads through scalable, managed infrastructure.",
     href: "/products#qcs",
   },
   {
-    icon: <Search strokeWidth={1.5} />,
-    title: "Quantum Search Engine Optimisation",
-    desc: "Quantum inspired optimization for search, ranking, and large scale relevance and discovery workloads.",
-    href: "/products#qseo",
+    icon: <Network strokeWidth={1.5} />,
+    title: "QNS",
+    desc: "Quantum Network Simulator for modelling secure, distributed quantum communication before deployment.",
+    href: "/products#qns",
   },
   {
-    icon: <Globe strokeWidth={1.5} />,
-    title: "QWS Web Services",
-    desc: "API-first quantum services for integrating quantum processing into enterprise systems.",
-    href: "/products#qws",
+    icon: <Terminal strokeWidth={1.5} />,
+    title: "QisCode",
+    desc: "Quantum IDE for designing, simulating, transpiling, and executing quantum programs in one workspace.",
+    href: "/products#qiscode",
+  },
+  {
+    icon: <Search strokeWidth={1.5} />,
+    title: "QSEO",
+    desc: "Quantum Search Engine Optimization for large scale relevance, ranking, and discovery workloads.",
+    href: "/products#qseo",
   },
 ];
 
@@ -210,7 +196,7 @@ const gatewayGroups = [
     title: "Research & Development",
     href: "/research-development",
     icon: <RadioTower strokeWidth={1.5} />,
-    items: ["Research Areas", "Technologies", "Projects", "Collaborations"],
+    items: ["Research Areas", "Research Programs", "Publications", "Patents"],
   },
   {
     title: "Resources",
@@ -361,7 +347,7 @@ export default function Home() {
             </p>
           </FadeInSection>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {productPortfolio.map((item, index) => (
               <ProductInfographicCard
                 key={item.title}

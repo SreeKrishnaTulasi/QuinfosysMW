@@ -12,6 +12,7 @@ import ResearchDevelopmentPage from './pages/ResearchDevelopmentPage';
 import ResourcesPage from './pages/ResourcesPage';
 import ServicesPage from './pages/ServicesPage';
 import SolutionsPage from './pages/SolutionsPage';
+import TechnologiesPage from './pages/TechnologiesPage';
 
 function RoutedPage({ children }: { children: React.ReactNode }) {
   return <PageShell>{children}</PageShell>;
@@ -73,6 +74,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<RoutedPage><ProductsPage /></RoutedPage>} />
         <Route path="/solutions" element={<RoutedPage><SolutionsPage /></RoutedPage>} />
+        <Route path="/technologies" element={<RoutedPage><TechnologiesPage /></RoutedPage>} />
         <Route path="/industries" element={<RoutedPage><IndustriesPage /></RoutedPage>} />
         <Route path="/services" element={<RoutedPage><ServicesPage /></RoutedPage>} />
         <Route path="/research-development" element={<RoutedPage><ResearchDevelopmentPage /></RoutedPage>} />

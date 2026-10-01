@@ -22,7 +22,7 @@ export const company = {
 
 export const navigation: NavItem[] = [
   { label: 'Products', href: '/products' },
-  { label: 'Solutions', href: '/solutions' },
+  { label: 'Technologies', href: '/technologies' },
   { label: 'Industries', href: '/industries' },
   { label: 'Services', href: '/services' },
   { label: 'Research', href: '/research-development' },
