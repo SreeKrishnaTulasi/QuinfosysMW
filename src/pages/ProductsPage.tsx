@@ -5,7 +5,6 @@ import {
   ChevronDown,
   Cloud,
   Code2,
-  Globe,
   Mail,
   Network,
   Search,
@@ -65,72 +64,40 @@ const products: ProductSection[] = [
     ],
   },
   {
-    id: "qws",
-    number: "02",
-    eyebrow: "Integration layer",
-    title: "Quantum Web Services",
-    shortName: "QWS",
-    icon: Globe,
-    href: "https://qws.quinfosys.com",
-    summary:
-      "QWS is the web integration layer for connecting quantum capabilities to applications through APIs, service endpoints, and enterprise software systems.",
-    longCopy:
-      "Quantum Web Services is designed for organizations that want quantum enabled capabilities to connect with existing applications instead of living in isolated research tools. QWS focuses on API driven access, quantum microservice patterns, secure communication, and real time result delivery so teams can integrate quantum processing into web, enterprise, and platform workflows with less friction.",
-    capabilities: [
-      "REST oriented access model for quantum algorithm execution",
-      "Quantum microservice architecture for application teams",
-      "Cross platform integration with existing enterprise systems",
-      "Real time quantum processing result delivery direction",
-      "Security focused communication patterns for future ready web infrastructure",
-    ],
-    useCases: [
-      "Application integration",
-      "Quantum APIs",
-      "Enterprise platforms",
-      "Secure web workflows",
-    ],
-    architecture: [
-      "API endpoints",
-      "Service layer",
-      "Result delivery",
-      "Security layer",
-    ],
-  },
-  {
     id: "qcs",
-    number: "03",
-    eyebrow: "Execution layer",
-    title: "Quantum Computing Services",
+    number: "02",
+    eyebrow: "Unified platform",
+    title: "QCS - Quantum Computing Services",
     shortName: "QCS",
     icon: Cloud,
     href: "https://qcs.quinfosys.com",
     summary:
-      "QCS is the execution layer for running quantum workloads through scalable infrastructure, managed resources, and secure hybrid computing paths.",
+      "QCS brings quantum compute, development tools, cloud infrastructure, web access, and managed services together under one product identity.",
     longCopy:
-      "Quantum Computing Services gives organizations a route to experiment with, manage, and scale quantum workloads without rebuilding their infrastructure from the ground up. The product direction focuses on managed quantum execution, hybrid classical and quantum pipelines, controlled resource access, and secure workload management for teams preparing for applied quantum adoption.",
+      "Quantum Computing Services is a unified platform for developing, accessing, executing, integrating, and managing quantum computing workflows. Five capability areas share one product: Quantum Compute for QPU access and simulation, Quantum Development for SDKs and APIs, Quantum Cloud for orchestration and scheduling, Quantum Web Services for the web portal, developer console, and REST APIs, and Quantum Managed Services for consulting, deployment, and support.",
     capabilities: [
-      "Elastic quantum compute environment for experimentation and scale",
-      "Hybrid classical and quantum pipeline support",
-      "Integrated user, workload, and resource management direction",
-      "Secure access patterns for enterprise grade deployment planning",
-      "Managed structure for research labs, startups, and businesses",
+      "Quantum Compute: QPU access, circuit simulation, and hybrid workloads",
+      "Quantum Development: SDKs, programming tools, and APIs",
+      "Quantum Cloud: provisioning, orchestration, and job scheduling",
+      "Quantum Web Services: web portal, developer console, and REST APIs",
+      "Quantum Managed Services: consulting, integration, and support",
     ],
     useCases: [
       "Quantum workload execution",
-      "Research compute access",
-      "Enterprise pilots",
-      "Hybrid adoption",
+      "Application development",
+      "Web and API access",
+      "Managed adoption",
     ],
     architecture: [
-      "Access layer",
-      "Workload queue",
-      "Hybrid pipelines",
-      "Resource control",
+      "Quantum Compute",
+      "Quantum Development",
+      "Quantum Cloud",
+      "Quantum Web Services",
     ],
   },
   {
     id: "qns",
-    number: "04",
+    number: "03",
     eyebrow: "Network layer",
     title: "Quantum Network Simulator",
     shortName: "QNS",
@@ -162,7 +129,7 @@ const products: ProductSection[] = [
   },
   {
     id: "qiscode",
-    number: "05",
+    number: "04",
     eyebrow: "Platform layer",
     title: "QisCode - Quantum IDE",
     shortName: "QisCode",
@@ -194,7 +161,7 @@ const products: ProductSection[] = [
   },
   {
     id: "qseo",
-    number: "06",
+    number: "05",
     eyebrow: "Optimization layer",
     title: "Quantum Search Engine Optimization",
     shortName: "QSEO",
@@ -228,8 +195,8 @@ const products: ProductSection[] = [
 
 const stackMarkers = [
   { label: "Language", text: "Design quantum logic" },
-  { label: "Compute", text: "Run managed workloads" },
-  { label: "Web", text: "Connect with applications" },
+  { label: "Compute", text: "Run, access, and manage workloads" },
+  { label: "Integrate", text: "Connect with applications" },
 ];
 
 
@@ -237,7 +204,7 @@ function ProductHeroInfographic() {
   const layers = [
     { icon: Code2, label: "QuCPL", text: "Language layer" },
     { icon: Cloud, label: "QCS", text: "Computing services" },
-    { icon: Globe, label: "QWS", text: "Web integration" },
+    { icon: Network, label: "QNS", text: "Network simulator" },
   ];
 
   return (
@@ -533,13 +500,13 @@ export default function ProductsPage() {
               Products
             </p>
             <h1 className="text-4xl font-medium tracking-[-0.05em] text-[#f8f8f8] sm:text-5xl lg:text-7xl">
-              Six Quantum Products. One connected stack.
+              Five Quantum Products. One connected stack.
             </h1>
             <p className="mt-8 max-w-3xl text-[1.02rem] font-light leading-8 text-slate-300 sm:text-lg sm:leading-9">
               Quinfosys products are structured as a connected quantum stack: a
-              development language, a computing services layer, and a web services
-              layer for bringing quantum capability into practical software
-              systems.
+              development language, a unified computing services platform, a network
+              simulator, a quantum IDE, and search optimization for bringing
+              quantum capability into practical software systems.
             </p>
           </div>
           <ProductHeroInfographic />

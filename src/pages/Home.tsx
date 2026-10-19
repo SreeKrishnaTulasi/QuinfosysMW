@@ -7,7 +7,6 @@ import {
   Code2,
   Cpu,
   FileText,
-  Globe,
   GraduationCap,
   Layers,
   Network,
@@ -55,16 +54,11 @@ const productPortfolio: ProductVisual[] = [
     desc: "Quantum Computing Programming Language for expressing quantum logic clearly and connecting it with classical workflows.",
     href: "/products#qucpl",
   },
-  {
-    icon: <Globe strokeWidth={1.5} />,
-    title: "QWS",
-    desc: "Quantum Web Services for integrating quantum processing into enterprise systems through APIs.",
-    href: "/products#qws",
-  },
+
   {
     icon: <Cloud strokeWidth={1.5} />,
-    title: "QCS",
-    desc: "Quantum Computing Services for running quantum workloads through scalable, managed infrastructure.",
+    title: "QCS - Quantum Computing Services",
+    desc: "Quantum compute, development, cloud, web services, and managed services in one unified platform.",
     href: "/products#qcs",
   },
   {

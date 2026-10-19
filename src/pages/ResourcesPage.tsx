@@ -76,7 +76,7 @@ const resourceSections: ResourceSection[] = [
     summary:
       "Developer Resources gathers the tools, guides, and examples developers need to start building with Quinfosys products.",
     longCopy:
-      "This section is for people writing quantum and hybrid software. It brings together quick start guides, code examples, SDK and tooling notes, and learning material for QuCPL, QisCode, QCS, QWS, and related products.",
+      "This section is for people writing quantum and hybrid software. It brings together quick start guides, code examples, SDK and tooling notes, and learning material for QuCPL, QisCode, QCS, and related products.",
     formats: ["Quick start guides", "Code examples", "SDK and tooling notes", "Learning material"],
     audience: [
       "Developers building quantum and hybrid applications",
@@ -96,7 +96,7 @@ const resourceSections: ResourceSection[] = [
     summary:
       "API Documentation provides the reference for connecting to Quinfosys services through APIs and service endpoints.",
     longCopy:
-      "This section documents endpoints, request and response formats, authentication, and usage notes for Quinfosys services such as Quantum Web Services and Quantum Computing Services, so application teams can integrate quantum capability into existing systems.",
+      "This section documents endpoints, request and response formats, authentication, and usage notes for Quinfosys services such as Quantum Computing Services and its web portal and REST APIs, so application teams can integrate quantum capability into existing systems.",
     formats: ["Endpoint reference", "Request and response formats", "Authentication notes", "Usage examples"],
     audience: [
       "Application developers integrating quantum services",

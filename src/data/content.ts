@@ -38,19 +38,13 @@ export const products: ContentItem[] = [
     description: 'Domain-specific language designed for quantum algorithm development, offering intuitive syntax, strong typing, and interoperability with classical code.',
     bullets: ['Intuitive quantum syntax', 'First-class support for qubit operations', 'Quantum-classical interoperability', 'Built-in simulator and debugger'],
   },
-  {
-    id: 'qws',
-    title: 'QWS',
-    eyebrow: 'Quantum Web Services',
-    description: 'Web-based APIs and services for accessing quantum computing capabilities from existing enterprise applications.',
-    bullets: ['RESTful APIs for quantum execution', 'Quantum microservices architecture', 'Cross-platform compatibility', 'Real-time processing results'],
-  },
+
   {
     id: 'qcs',
     title: 'QCS',
     eyebrow: 'Quantum Computing Services',
-    description: 'Scalable, on-demand quantum computing services enabling businesses to run quantum workloads with secure access to quantum computing resources.',
-    bullets: ['Elastic quantum compute environment', 'Hybrid classical-quantum pipelines', 'Integrated resource management', 'Security and compliance built in'],
+    description: 'Unified platform combining quantum compute, development, cloud, web services, and managed services.',
+    bullets: ['Quantum Compute', 'Quantum Development', 'Quantum Cloud', 'Quantum Web Services', 'Quantum Managed Services'],
   },
   {
     id: 'qns',
