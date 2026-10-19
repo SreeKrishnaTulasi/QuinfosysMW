@@ -40,7 +40,7 @@ function shouldRunDesktopWave() {
     return false;
   }
 
-  return window.matchMedia("(min-width: 1024px) and (hover: hover) and (pointer: fine)").matches;
+  return window.matchMedia("(min-width: 768px)").matches;
 }
 
 type WavePathOptions = {
@@ -149,7 +149,7 @@ export default function QuantumDoodleWave({
       return;
     }
 
-    const mediaQuery = window.matchMedia("(min-width: 1024px) and (hover: hover) and (pointer: fine)");
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
     const syncDesktopWaveState = () => setDesktopWaveEnabled(mediaQuery.matches);
 
     syncDesktopWaveState();
