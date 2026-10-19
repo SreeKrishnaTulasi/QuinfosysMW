@@ -131,7 +131,7 @@ function HeroTextContent({
       <>
         <div className={staticFadeClass}>
           <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em]">
-            The Next Era of Computing
+            The Era of Quantum
           </p>
         </div>
         <div className={staticFadeClass}>
@@ -157,7 +157,7 @@ function HeroTextContent({
     <>
       <FadeInSection delay={100}>
         <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em]">
-          The Next Era of Computing
+          The Era of Quantum
         </p>
       </FadeInSection>
       <FadeInSection delay={200}>
